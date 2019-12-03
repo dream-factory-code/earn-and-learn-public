@@ -12,7 +12,6 @@ public class Main {
 
     public static void customPrint(int n) {
         StringBuilder output = new StringBuilder();
-
         for(int i = 1; i <=n; i++) {
             if(i%15 == 0) {
                 output.append("fizzbuzz\n") ;
