@@ -12,7 +12,7 @@ public class Main {
             String output = fizBuz(n);
             System.out.println(output);
         }
-        catch (NumberFormatException){
+        catch (NumberFormatException e){
             System.out.println("number not provided");
         }
     }
@@ -26,7 +26,7 @@ public class Main {
             if (i % 5 == 0) {
                 sb.append("buzz");
             }
-            if (i != 15) {
+            if (i % 3 != 0 && i % 5 != 0) {
                 sb.append(i);
             }
             sb.append("\n");
