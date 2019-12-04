@@ -9,13 +9,13 @@ public class Main {
         }
         try {
             int n = Integer.parseInt(args[0]);
-            printStuff(n);
+            System.out.println(printStuff(n));
         } catch (NumberFormatException e) {
             e.printStackTrace();
         }
     }
 
-    private static void printStuff(int n) {
+    public static String printStuff(int n) {
         StringBuilder output = new StringBuilder();
 
         for (int i = 1; i <= n; i++) {
@@ -31,6 +31,6 @@ public class Main {
 
             output.append("\n");
         }
-        System.out.print(output);
+        return output.toString();
     }
 }
