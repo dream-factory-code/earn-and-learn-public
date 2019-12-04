@@ -9,7 +9,7 @@ public class Main {
                 output.append("fizz");
             if(i%5 == 0)
                 output.append("buzz");
-            if(i%5 != 0 & i%3 != 0)
+            if(i%5 != 0 && i%3 != 0)
                 output.append(i);
             output.append("\n");
         }
