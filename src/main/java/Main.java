@@ -1,7 +1,15 @@
 public class Main {
 
     public static void main(String[] args) {
-        int n = Integer.parseInt(args[0]);
+        try {
+            int n = Integer.parseInt(args[0]);
+            specialPrint(n);
+        } catch (Exception e) {
+            System.out.println("Error. Number is not provided");
+        }
+    }
+
+    public static void specialPrint(int n) {
         StringBuilder sb = new StringBuilder();
 
         for (int i=1; i <= n; i++){
@@ -18,3 +26,5 @@ public class Main {
         System.out.println(sb);
     }
 }
+
+
