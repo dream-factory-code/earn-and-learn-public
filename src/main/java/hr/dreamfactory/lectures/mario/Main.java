@@ -9,13 +9,13 @@ public class Main {
         }
         try {
             int n = Integer.parseInt(args[0]);
-            specialPrint(n);
+            String output = specialPrint(n);
         } catch (NumberFormatException e) {
-            System.out.println("Error. Number is not provided");
+            System.out.println("Number is not provided");
         }
     }
 
-    public static void specialPrint(int n) {
+    public static String specialPrint(int n) {
         StringBuilder output = new StringBuilder();
 
         for (int i = 1; i <= n; i++) {
@@ -30,7 +30,7 @@ public class Main {
             }
             output.append("\n");
         }
-        System.out.println(output);
+        return output.toString();
     }
 }
 
