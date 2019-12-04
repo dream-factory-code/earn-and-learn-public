@@ -12,7 +12,7 @@ public class Main {
             } else if (i%3==0) {
                 sb.append("buzz\n");
             } else {
-                sb.append(i);
+                sb.append(i).append("\n");
             }
         }
         System.out.println(sb);
