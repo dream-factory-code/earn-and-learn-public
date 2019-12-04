@@ -8,14 +8,14 @@ public class Main {
         }
 
         try {
-            String result = fizzBuzzPrint(Integer.parseInt(args[0]));
+            String result = fizzBuzz(Integer.parseInt(args[0]));
             System.out.println(result);
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }
     }
 
-    private static String fizzBuzzPrint(Integer n) {
+    private static String fizzBuzz(Integer n) {
         StringBuilder result = new StringBuilder();
 
         for (Integer i = 1; i <= n; i++) {
