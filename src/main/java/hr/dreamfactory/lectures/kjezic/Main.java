@@ -9,13 +9,13 @@ public class Main {
         }
         try {
             int n = Integer.parseInt(args[0]);
-            System.out.println(printStuff(n));
+            System.out.println(fizzBuzz(n));
         } catch (NumberFormatException e) {
             e.printStackTrace();
         }
     }
 
-    public static String printStuff(int n) {
+    public static String fizzBuzz(int n) {
         StringBuilder output = new StringBuilder();
 
         for (int i = 1; i <= n; i++) {
@@ -25,7 +25,7 @@ public class Main {
             if (i % 5 == 0) {
                 output.append("buzz");
             }
-            if (i % 5 != 0 && i % 3 != 0) {
+            if (i % 15 != 0) {
                 output.append(i);
             }
 
