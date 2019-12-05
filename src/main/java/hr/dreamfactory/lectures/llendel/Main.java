@@ -15,7 +15,7 @@ public class Main {
         }
     }
 
-    private static String fizzBuzz(Integer n) {
+    public static String fizzBuzz(Integer n) {
         StringBuilder result = new StringBuilder();
 
         for (Integer i = 1; i <= n; i++) {
@@ -25,7 +25,7 @@ public class Main {
             if (i % 5 == 0) {
                 result.append("buzz");
             }
-            if (i % 15 != 0) {
+            if (i % 3 != 0 && i % 5 != 0) {
                 result.append(i.toString());
             }
 
