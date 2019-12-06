@@ -9,16 +9,16 @@ public class FizzBuzzSample {
 
     public static void main(String[] args) {
         if (args.length < 1) {
-            System.out.println("Please provide some input.");
+            LOGGER.error("Please provide a natural number ");
             System.exit(1);
         }
 
         try {
             int input = Integer.parseInt(args[0]);
             String output = listNumbers(input);
-            System.out.println(output);
+            LOGGER.info(output);
         } catch (NumberFormatException e) {
-            System.out.println("Number is not provided.");
+            LOGGER.error("Input is not a number.", e);
         }
     }
 
@@ -42,6 +42,9 @@ public class FizzBuzzSample {
             }
             output.append(i);
             output.append("\n");
+            if(i % 2 == 0){
+                LOGGER.debug("Iterated over: {}", i);
+            }
         }
         return output.toString();
     }
