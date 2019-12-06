@@ -1,21 +1,25 @@
 package hr.dreamfactory.lectures.pfribert;
 
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
+
 import static java.lang.Integer.parseInt;
 
 public class Main {
+    private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) {
         if (args.length < 1) {
-            System.out.println("Parameter is empty.");
+            LOGGER.error("Parameter shouldn't be empty.");
             System.exit(1);
         }
-        int num = 0;
         try {
-            num = parseInt(args[0]);
+            int num = parseInt(args[0]);
+            String output = fizzBuzzer(num);
+            LOGGER.info(output);
         } catch (NumberFormatException e) {
-            System.out.println("Argument should be a number.");
+            LOGGER.error("Argument should be a number.", e);
         }
-        System.out.println(fizzBuzzer(num));
     }
 
     public static String fizzBuzzer(int n) {
@@ -32,6 +36,9 @@ public class Main {
                 output.append(i);
             }
             output.append("\n");
+            if (i % 2 == 0){
+                LOGGER.debug("Iterated over: {}", i);
+            }
         }
         
         return output.toString();
