@@ -1,29 +1,28 @@
 package hr.dreamfactory.lectures.vice;
 
-public class Main {
+public class FizzBuzzSample {
 
     public static void main(String[] args) {
         if (args.length < 1) {
-            System.out.println("A parameter should be specified");
+            System.out.println("Please provide some input.");
             System.exit(1);
         }
 
-        int input2 = Integer.parseInt(args[0]);
-
         try {
             int input = Integer.parseInt(args[0]);
-            customPrint(input);
+            String output = listNumbers(input);
+            System.out.println(output);
         } catch (NumberFormatException e) {
             System.out.println("Number is not provided.");
         }
-}
+    }
 
-    public static void customPrint(int n) {
+    public static String listNumbers(int n) {
         StringBuilder output = new StringBuilder();
 
         for (int i = 1; i <= n; i++) {
             if (i % 15 == 0) {
-                output.append("fizzbuzz\n") ;
+                output.append("fizzbuzz\n");
                 continue;
             }
 
@@ -39,7 +38,6 @@ public class Main {
             output.append(i);
             output.append("\n");
         }
-
-        System.out.println(output);
+        return output.toString();
     }
 }

@@ -10,14 +10,14 @@ public class Main {
 
         try {
             int input = Integer.parseInt(args[0]);
-            String output = customPrint(input);
+            String output = listNumbers(input);
             System.out.println(output);
         } catch (NumberFormatException e) {
             System.out.println("Number is not provided.");
         }
     }
 
-    public static String customPrint(int n) {
+    public static String listNumbers(int n) {
         StringBuilder output = new StringBuilder();
 
         for (int i = 1; i <= n; i++) {
