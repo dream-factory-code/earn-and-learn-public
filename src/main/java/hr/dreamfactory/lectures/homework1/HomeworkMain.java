@@ -1,4 +1,4 @@
-package hr.dreamfactory.lectures.vice;
+package hr.dreamfactory.lectures.homework1;
 
 public class HomeworkMain {
 

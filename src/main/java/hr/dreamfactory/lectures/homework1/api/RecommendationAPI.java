@@ -1,6 +1,6 @@
-package hr.dreamfactory.lectures.vice.api;
+package hr.dreamfactory.lectures.homework1.api;
 
-import hr.dreamfactory.lectures.vice.model.BannerResults;
+import hr.dreamfactory.lectures.homework1.model.BannerResults;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;

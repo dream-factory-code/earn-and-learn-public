@@ -1,4 +1,4 @@
-package hr.dreamfactory.lectures.vice.model;
+package hr.dreamfactory.lectures.homework1.model;
 
 import java.util.List;
 

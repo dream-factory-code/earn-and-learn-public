@@ -1,11 +1,11 @@
-package hr.dreamfactory.lectures.vice;
+package hr.dreamfactory.lectures.homework1;
 
 import feign.Feign;
 import feign.gson.GsonDecoder;
 import feign.jaxrs.JAXRSContract;
-import hr.dreamfactory.lectures.vice.api.RecommendationAPI;
-import hr.dreamfactory.lectures.vice.model.Banner;
-import hr.dreamfactory.lectures.vice.model.BannerResults;
+import hr.dreamfactory.lectures.homework1.api.RecommendationAPI;
+import hr.dreamfactory.lectures.homework1.model.Banner;
+import hr.dreamfactory.lectures.homework1.model.BannerResults;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
