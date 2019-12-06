@@ -1,17 +1,24 @@
 package hr.dreamfactory.lectures.kjezic;
 
+import org.slf4j.LoggerFactory;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class Main {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) {
         if (args.length < 1) {
-            System.out.println("Input arguments");
+            LOGGER.error("Please provide natural number");
             System.exit(1);
         }
         try {
             int n = Integer.parseInt(args[0]);
-            System.out.println(fizzBuzz(n));
+            LOGGER.info(fizzBuzz(n));
         } catch (NumberFormatException e) {
-            e.printStackTrace();
+            LOGGER.error("Input is not a number.", e);
         }
     }
 
@@ -20,6 +27,7 @@ public class Main {
 
         for (int i = 1; i <= n; i++) {
             if (i % 3 == 0) {
+                LOGGER.debug("Iterated over {}", i);
                 output.append("fizz");
             }
             if (i % 5 == 0) {
