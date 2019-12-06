@@ -1,6 +1,11 @@
 package hr.dreamfactory.lectures.vice;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class FizzBuzzSample {
+    private static final Logger LOGGER = LoggerFactory.getLogger(FizzBuzzSample.class);
+
 
     public static void main(String[] args) {
         if (args.length < 1) {
