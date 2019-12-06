@@ -25,7 +25,7 @@ public class Main {
             if (i % 5 == 0) {
                 output.append("buzz");
             }
-            if (i % 15 != 0) {
+            if (i % 3 != 0 && i % 5 != 0) {
                 output.append(i);
             }
 
