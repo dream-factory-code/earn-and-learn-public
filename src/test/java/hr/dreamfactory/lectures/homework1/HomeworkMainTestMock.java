@@ -33,13 +33,4 @@ class HomeworkMainTestMock {
         Assert.assertNotNull(users.getRandomUsers());
     }
 
-    @Test
-    public void mockUsersCSVTest(){
-        List<User> users;
-        MockUsers mockuser = new MockUsers();
-        users = mockuser.getRandomUsers();
-        HomeworkMain.writeToCSV(users);
-        File file = new File("./geese.csv");
-        Assert.assertNotNull(file);
-    }
 }
