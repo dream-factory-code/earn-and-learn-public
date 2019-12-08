@@ -11,7 +11,7 @@ public class UserModel implements User {
 
     @Override
     public String fullName() {
-        return String.format(fullName.getTitle()+ " " + fullName.getFirst() + " " +fullName.getLast());
+        return String.format(fullName.getTitle() + " " + fullName.getFirst() + " " + fullName.getLast());
     }
 
     @Override

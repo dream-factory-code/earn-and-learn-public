@@ -1,12 +1,16 @@
 package hr.dreamfactory.lectures.homework1;
 
-import ch.qos.logback.classic.spi.LoggerRemoteView;
-import com.opencsv.CSVWriter;
-import com.sun.media.jfxmedia.logging.Logger;
+import ch.qos.logback.core.net.SyslogOutputStream;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import feign.Feign;
+import feign.gson.GsonDecoder;
+import feign.jaxrs.JAXRSContract;
+import hr.dreamfactory.lectures.homework1.api.RandomUserAPI;
 import hr.dreamfactory.lectures.homework1.common.User;
+import hr.dreamfactory.lectures.homework1.common.Users;
 import hr.dreamfactory.lectures.homework1.model.MockUser;
-import hr.dreamfactory.lectures.homework1.model.MockUsers;
-import javafx.scene.shape.Path;
 import org.slf4j.LoggerFactory;
 
 import java.io.BufferedWriter;
@@ -21,6 +25,15 @@ public class HomeworkMain {
 
     public static void main(String[] args) {
 
+        RandomUserAPI api = Feign.builder()
+                .contract(new JAXRSContract())
+                .decoder(new GsonDecoder())
+                .target(RandomUserAPI.class, "https://randomuser.me");
+
+        JsonObject jsonObject = api.getUsers("10");
+
+        System.out.println(jsonObject.get("results").getAsJsonArray());
+
     }
 
     public static void writeToCSV(List<MockUser> users) {
@@ -28,18 +41,17 @@ public class HomeworkMain {
         File csvfile = new File(filePath);
         try {
             BufferedWriter bfw = new BufferedWriter(new FileWriter(csvfile));
-            String[] header = { "fullname", "location"};
+            String[] header = {"fullname", "location"};
             bfw.write(header[0] + ", " + header[1]);
             bfw.newLine();
 
-            for (int i = 0; i < users.size(); ++i){
+            for (int i = 0; i < users.size(); ++i) {
                 bfw.write(users.get(i).serializeUserToCSV());
                 bfw.newLine();
             }
 
             bfw.close();
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             LOGGER.error(e.toString());
         }
     }
