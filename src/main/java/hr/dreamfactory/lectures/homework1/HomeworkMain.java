@@ -17,7 +17,7 @@ public class HomeworkMain {
     private static String FIELD_ONE = "fullname";
     private static String FIELD_TWO = "location";
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(FeignMain.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(HomeworkMain.class);
 
     public static void main(String[] args) {
 
