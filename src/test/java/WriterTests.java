@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class WriterTests {
     @Test
     public void noUsersTest() {
-        final String expected = "fullname, location\n";
+        final String expected = "fullname, location";
         final String actual = HomeworkMain.listToCsv(new ArrayList<User>());
 
         Assert.assertEquals(expected, actual);
@@ -22,7 +22,7 @@ public class WriterTests {
         users.addUser(new MockUser("Ivan", "Ivanović", "Ivanić Grad, Croatia"));
 
         final String expected = "fullname, location\n" +
-                "\"Ivan Ivanović\", \"Ivanić Grad, Croatia\"\n";
+                "\"Ivan Ivanović\", \"Ivanić Grad, Croatia\"";
         final String actual = HomeworkMain.listToCsv(users.getRandomUsers());
 
         Assert.assertEquals(expected, actual);
@@ -38,7 +38,7 @@ public class WriterTests {
         final String expected = "fullname, location\n" +
                 "\"Ivan Ivanović\", \"Ivanić Grad, Croatia\"\n" +
                 "\"Ivan Ivanović\", \"Ivanić Grad, Croatia\"\n" +
-                "\"Ivan Ivanović\", \"Ivanić Grad, Croatia\"\n";
+                "\"Ivan Ivanović\", \"Ivanić Grad, Croatia\"";
         final String actual = HomeworkMain.listToCsv(users.getRandomUsers());
 
         Assert.assertEquals(expected, actual);

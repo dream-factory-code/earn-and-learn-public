@@ -32,10 +32,10 @@ public class HomeworkMain {
         StringBuilder result = new StringBuilder();
 
         // CSV header
-        result.append("fullname, location\n");
+        result.append("fullname, location");
 
         for (User user : users) {
-            String line = String.format("\"" + user.fullName() + "\"" + ", " + "\"" + user.location() + "\"" + "\n");
+            String line = String.format("\n\"" + user.fullName() + "\"" + ", " + "\"" + user.location() + "\"");
             result.append(line);
         }
 
