@@ -7,12 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MockUsers implements Users {
-    private List<User> userList;
+    private List<User> userList = new ArrayList<>();
 
     @Override
     public List<User> getRandomUsers() {
-        userList = new ArrayList<>();
-        int numOfUsers = (int) Math.random() + 1;
+        int numOfUsers = (int) (Math.random() * 100 + 1);
         for (int i = 0; i < numOfUsers; ++i) {
             userList.add(new MockUser());
         }

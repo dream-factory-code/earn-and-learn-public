@@ -1,6 +1,7 @@
 package hr.dreamfactory.lectures.homework1;
 
-import hr.dreamfactory.lectures.homework1.model.MockUser;
+import hr.dreamfactory.lectures.homework1.common.User;
+import hr.dreamfactory.lectures.homework1.model.MockUsers;
 import org.slf4j.LoggerFactory;
 
 import java.io.BufferedWriter;
@@ -17,7 +18,7 @@ public class HomeworkMain {
 
     }
 
-    public static void writeToCSV(List<MockUser> users) {
+    public static void writeToCSV(List<User> users) {
         String filePath = "./geese.csv";
         File csvfile = new File(filePath);
         try {
@@ -26,8 +27,8 @@ public class HomeworkMain {
             bfw.write(header[0] + ", " + header[1]);
             bfw.newLine();
 
-            for (MockUser user : users) {
-                bfw.write(user.serializeUserToCSV());
+            for (User user : users) {
+                bfw.write("\"" + user.fullName() + "\"" + ", " + "\"" + user.location() + "\"");
                 bfw.newLine();
             }
 
