@@ -1,15 +1,13 @@
 package hr.dreamfactory.lectures.homework1;
 
+import com.sun.istack.internal.NotNull;
 import hr.dreamfactory.lectures.homework1.model.UserMock;
-import hr.dreamfactory.lectures.homework1.model.UsersMock;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.List;
 
 public class HomeworkMain {
@@ -23,9 +21,12 @@ public class HomeworkMain {
 
     }
 
-    public static void writeToCSVFile(Path path, List<UserMock> users) {
-        try {
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(path.toFile()));
+    public static void writeToCSVFile(@NotNull Path path, @NotNull List<UserMock> users) {
+        if (users.size() == 0) {
+            return;
+        }
+
+        try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(path.toFile(), true))) {
             bufferedWriter.write(FIELD_ONE + ", " + FIELD_TWO);
             bufferedWriter.newLine();
 
@@ -33,8 +34,6 @@ public class HomeworkMain {
                 bufferedWriter.write(user.serializeToCSV());
                 bufferedWriter.newLine();
             }
-
-            bufferedWriter.close();
         } catch (IOException e) {
             LOGGER.error(e.toString());
         }
