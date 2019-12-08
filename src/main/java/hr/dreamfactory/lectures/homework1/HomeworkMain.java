@@ -1,12 +1,6 @@
 package hr.dreamfactory.lectures.homework1;
 
-import ch.qos.logback.classic.spi.LoggerRemoteView;
-import com.opencsv.CSVWriter;
-import com.sun.media.jfxmedia.logging.Logger;
-import hr.dreamfactory.lectures.homework1.common.User;
 import hr.dreamfactory.lectures.homework1.model.MockUser;
-import hr.dreamfactory.lectures.homework1.model.MockUsers;
-import javafx.scene.shape.Path;
 import org.slf4j.LoggerFactory;
 
 import java.io.BufferedWriter;
@@ -32,8 +26,8 @@ public class HomeworkMain {
             bfw.write(header[0] + ", " + header[1]);
             bfw.newLine();
 
-            for (int i = 0; i < users.size(); ++i){
-                bfw.write(users.get(i).serializeUserToCSV());
+            for (MockUser user : users) {
+                bfw.write(user.serializeUserToCSV());
                 bfw.newLine();
             }
 
