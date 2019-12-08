@@ -13,6 +13,7 @@ import hr.dreamfactory.lectures.homework1.common.Users;
 import hr.dreamfactory.lectures.homework1.model.MockUser;
 import org.slf4j.LoggerFactory;
 
+import javax.ws.rs.HEAD;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -47,7 +48,10 @@ public class HomeworkMain {
 
             for (int i = 0; i < users.size(); ++i) {
                 bfw.write(users.get(i).serializeUserToCSV());
-                bfw.newLine();
+                for (MockUser user : users) {
+                    bfw.write(user.serializeUserToCSV());
+                    bfw.newLine();
+                }
             }
 
             bfw.close();
