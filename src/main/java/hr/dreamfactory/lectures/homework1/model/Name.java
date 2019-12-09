@@ -6,10 +6,8 @@ import com.google.gson.annotations.SerializedName;
 public class Name {
 
     @SerializedName("first")
-    @Expose
     private String firstName;
     @SerializedName("last")
-    @Expose
     private String lastName;
 
     public Name(String firstName, String lastName) {

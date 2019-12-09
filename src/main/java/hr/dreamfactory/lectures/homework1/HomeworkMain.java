@@ -31,7 +31,13 @@ public class HomeworkMain {
                 .target(RandomUserAPI.class, "https://randomuser.me");
 
 
-        UsersModel users = api.getUsers("10");
+        UsersModel users = api.getResults("10");
+
+        System.out.println(users.getResults().size());
+
+        for (UserModel userModel : users.getResults()){
+            System.out.println(userModel.fullName());
+        }
 
     }
 

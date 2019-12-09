@@ -3,6 +3,7 @@ package hr.dreamfactory.lectures.homework1.api;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import hr.dreamfactory.lectures.homework1.common.Users;
+import hr.dreamfactory.lectures.homework1.model.UserModel;
 import hr.dreamfactory.lectures.homework1.model.UsersModel;
 
 import javax.ws.rs.GET;
@@ -18,5 +19,5 @@ public interface RandomUserAPI {
 
     @GET
     @Path("?results={results}")
-    UsersModel getUsers(@PathParam("results") String results);
+    UsersModel getResults(@PathParam("results") String results);
 }

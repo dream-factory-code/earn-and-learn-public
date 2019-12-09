@@ -9,11 +9,7 @@ import java.util.Map;
 
 public class UserModel implements User {
 
-    @SerializedName("name")
-    @Expose
     private Name name;
-    @SerializedName("location")
-    @Expose
     private Location location;
 
     public UserModel(Name name, Location location) {
@@ -29,5 +25,21 @@ public class UserModel implements User {
     @Override
     public String location() {
         return location.getCity() + " " + location.getCountry();
+    }
+
+    public Name getName() {
+        return name;
+    }
+
+    public void setName(Name name) {
+        this.name = name;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
     }
 }
