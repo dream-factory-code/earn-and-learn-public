@@ -1,9 +1,8 @@
-package hr.dreamfactory.lectures1.mario.model;
+package hr.dreamfactory.lectures.homework1.model;
 
 import java.util.List;
 
 public class BannerResults {
-
     private List<Banner> results;
 
     public List<Banner> getResults() {

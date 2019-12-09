@@ -12,67 +12,31 @@
     <groupId>dream-factory</groupId>
     <artifactId>prvopredavanje</artifactId>
     <version>1.0-SNAPSHOT</version>
-<<<<<<< HEAD
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>7</source>
-                    <target>7</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-    <dependencies>
-    <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter</artifactId>
-        <version>RELEASE</version>
-        <scope>test</scope>
-    </dependency>
-
-    <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
-=======
 
     <dependencies>
->>>>>>> 34a4504f9e399fa444f176fd72884c6fc15ee26e
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.2.3</version>
         </dependency>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 34a4504f9e399fa444f176fd72884c6fc15ee26e
         <dependency>
             <groupId>io.github.openfeign</groupId>
             <artifactId>feign-gson</artifactId>
             <version>9.4.0</version>
         </dependency>
-<<<<<<< HEAD
-=======
 
->>>>>>> 34a4504f9e399fa444f176fd72884c6fc15ee26e
         <dependency>
             <groupId>javax.ws.rs</groupId>
             <artifactId>javax.ws.rs-api</artifactId>
             <version>2.0</version>
         </dependency>
-<<<<<<< HEAD
-=======
 
->>>>>>> 34a4504f9e399fa444f176fd72884c6fc15ee26e
         <dependency>
             <groupId>io.github.openfeign</groupId>
             <artifactId>feign-jaxrs</artifactId>
             <version>9.4.0</version>
         </dependency>
-<<<<<<< HEAD
-=======
 
         <dependency>
             <groupId>org.testng</groupId>
@@ -80,6 +44,5 @@
             <version>6.14.2</version>
         </dependency>
 
->>>>>>> 34a4504f9e399fa444f176fd72884c6fc15ee26e
     </dependencies>
 </project>

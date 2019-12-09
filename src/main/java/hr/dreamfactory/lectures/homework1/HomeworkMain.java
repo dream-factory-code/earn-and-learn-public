@@ -1,8 +1,11 @@
-package hr.dreamfactory.lectures1.homework1;
+package hr.dreamfactory.lectures.homework1;
 
-import hr.dreamfactory.lectures1.homework1.common.User;
-import hr.dreamfactory.lectures1.homework1.model.MockUser;
-import hr.dreamfactory.lectures1.homework1.model.MockUsers;
+import feign.Feign;
+import feign.gson.GsonDecoder;
+import feign.jaxrs.JAXRSContract;
+import hr.dreamfactory.lectures.homework1.api.UserAPI;
+import hr.dreamfactory.lectures.homework1.common.User;
+import hr.dreamfactory.lectures.homework1.model.UsersModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,13 +18,15 @@ public class HomeworkMain {
     private static final Logger LOGGER = LoggerFactory.getLogger(HomeworkMain.class);
 
     public static void main(String[] args) {
-        // Mock classes will be replaced with real models
-        MockUsers users = new MockUsers();
-        // Data will be fetched from an API
-        users.addUser(new MockUser("Ivan", "Ivanovic", "Ivanić Grad, Croatia"));
+        UserAPI api = Feign.builder()
+                .contract(new JAXRSContract())
+                .decoder(new GsonDecoder())
+                .target(UserAPI.class, "https://randomuser.me/");
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("users.csv"))) {
-            writer.write(listToCsv(users.getRandomUsers()));
+        UsersModel usersModel = api.getUsers("4");
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("chicken.csv"))) {
+            writer.write(listToCsv(usersModel.getRandomUsers()));
             LOGGER.info("Users written to .csv");
         } catch (IOException e) {
             LOGGER.error("Something went wrong :( ", e);
@@ -31,7 +36,6 @@ public class HomeworkMain {
     public static String listToCsv(List<User> users) {
         StringBuilder result = new StringBuilder();
 
-        // CSV header
         result.append("fullname, location");
 
         for (User user : users) {

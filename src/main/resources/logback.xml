@@ -5,11 +5,7 @@
         </encoder>
     </appender>
 
-<<<<<<< HEAD
-    <root level="debug">
-=======
     <root level="info">
->>>>>>> 34a4504f9e399fa444f176fd72884c6fc15ee26e
         <appender-ref ref="STDOUT" />
     </root>
 </configuration>

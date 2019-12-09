@@ -1,7 +1,7 @@
-package hr.dreamfactory.lectures1.homework1.model;
+package hr.dreamfactory.lectures.homework1.model;
 
-import hr.dreamfactory.lectures1.homework1.common.User;
-import hr.dreamfactory.lectures1.homework1.common.Users;
+import hr.dreamfactory.lectures.homework1.common.User;
+import hr.dreamfactory.lectures.homework1.common.Users;
 
 import java.util.ArrayList;
 import java.util.List;

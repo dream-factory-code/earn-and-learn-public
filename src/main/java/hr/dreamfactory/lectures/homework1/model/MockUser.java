@@ -1,6 +1,6 @@
-package hr.dreamfactory.lectures1.homework1.model;
+package hr.dreamfactory.lectures.homework1.model;
 
-import hr.dreamfactory.lectures1.homework1.common.User;
+import hr.dreamfactory.lectures.homework1.common.User;
 
 public class MockUser implements User {
     private String firstName;

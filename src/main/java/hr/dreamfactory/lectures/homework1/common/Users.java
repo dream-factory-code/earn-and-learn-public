@@ -1,4 +1,4 @@
-package hr.dreamfactory.lectures1.homework1.common;
+package hr.dreamfactory.lectures.homework1.common;
 
 import java.util.List;
 
