@@ -1,21 +1,26 @@
 package hr.dreamfactory.lectures.mario;
 
-public class Main {
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class FizzBuzz {
+    private static final Logger LOGGER = LoggerFactory.getLogger(FizzBuzz.class);
 
     public static void main(String[] args) {
         if (args.length < 1) {
-            System.out.println("Not enough arguments provided.");
+            LOGGER.error("Please provide a natural number.");
             System.exit(1);
         }
         try {
             int n = Integer.parseInt(args[0]);
-            String output = specialPrint(n);
+            String output = specialFizzBuzz(n);
+            LOGGER.info(output);
         } catch (NumberFormatException e) {
-            System.out.println("Number is not provided");
+            LOGGER.error("Input is not a number.", e);
         }
     }
 
-    public static String specialPrint(int n) {
+    public static String specialFizzBuzz(int n) {
         StringBuilder output = new StringBuilder();
 
         for (int i = 1; i <= n; i++) {
@@ -29,6 +34,9 @@ public class Main {
                 output.append(i);
             }
             output.append("\n");
+            if (i % 100 == 0) {
+                LOGGER.debug("Iterated over: {}",i);
+            }
         }
         return output.toString();
     }
