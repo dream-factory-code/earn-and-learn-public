@@ -18,15 +18,16 @@ public class MockUsers implements Users {
         userList.add(user);
     }
 
-    public String serializeUserList() {
+    public String serializeMockUserList() {
         StringBuilder serialize = new StringBuilder();
         if (userList.size() < 1){
             return "List of users is empty.";
         }
         for (User user : userList) {
-            serialize.append(user.fullName() + " \"" + user.location() + "\"\n");
+            serialize.append(user.fullName() + ", \"" + user.location() + "\"\n");
         }
 
         return serialize.toString();
     }
+
 }

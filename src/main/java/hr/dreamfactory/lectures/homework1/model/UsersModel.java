@@ -34,4 +34,16 @@ public class UsersModel implements Users{
     public List<User> getRandomUsers() {
         return null;
     }
+
+    public String serializeUsers() {
+        StringBuilder serialize = new StringBuilder();
+        if (results.size() < 1){
+            return "List of users is empty.";
+        }
+        for (User user : results) {
+            serialize.append(user.fullName() + ", \"" + user.location() + "\"\n");
+        }
+
+        return serialize.toString();
+    }
 }

@@ -26,8 +26,8 @@ class HomeworkMainTestMock {
     public void mockUsersListTest() {
         MockUsers users = new MockUsers();
         users.addMockUser(new MockUser());
-        String result = users.serializeUserList();
-        String expected = "Ena Fra \"Zagreb, Croatia\"\n";
+        String result = users.serializeMockUserList();
+        String expected = "Ena Fra, \"Zagreb, Croatia\"\n";
         Assert.assertEquals(expected, result);
     }
 
@@ -37,7 +37,7 @@ class HomeworkMainTestMock {
         MockUsers users1 = new MockUsers();
         users1.addMockUser(new MockUser());
         users1.addMockUser(new MockUser());
-        String result = users1.serializeUserList();
+        String result = users1.serializeMockUserList();
         HomeworkMain.writeToCSV(result);
     }
 
@@ -45,14 +45,14 @@ class HomeworkMainTestMock {
     public void nullSerializeTest() {
         MockUsers users2 = new MockUsers();
         String expected = "List of users is empty.";
-        String result = users2.serializeUserList();
+        String result = users2.serializeMockUserList();
          Assert.assertEquals(expected, result);
     }
 
     @Test
     public void nullCSVTest() {
         MockUsers users3 = new MockUsers();
-        String serialize = users3.serializeUserList();
+        String serialize = users3.serializeMockUserList();
         HomeworkMain.writeToCSV(serialize);
     }
 }
