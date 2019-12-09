@@ -48,4 +48,8 @@ public class UserModel implements User {
                 ", location=" + location +
                 '}';
     }
+
+    public String serializeToCSV() {
+        return "\"" + fullName() + "\", \"" + location() + "\"";
+    }
 }
