@@ -1,6 +1,5 @@
 package hr.dreamfactory.lectures.homework1;
 
-import com.sun.istack.internal.NotNull;
 import feign.Feign;
 import feign.gson.GsonDecoder;
 import feign.jaxrs.JAXRSContract;
@@ -33,7 +32,7 @@ public class HomeworkMain {
         writeToCSVFile(output, result.getResults());
     }
 
-    public static void writeToCSVFile(@NotNull Path path, @NotNull List<UserModel> users) {
+    public static void writeToCSVFile( Path path,  List<UserModel> users) {
         if (users.size() == 0) {
             return;
         }
