@@ -1,7 +1,6 @@
-package hr.dreamfactory.lectures.mario.api;
+package hr.dreamfactory.lectures1.mario.api;
 
-import hr.dreamfactory.lectures.mario.model.Banner;
-import hr.dreamfactory.lectures.mario.model.BannerResults;
+import hr.dreamfactory.lectures1.mario.model.BannerResults;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

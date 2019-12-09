@@ -1,4 +1,4 @@
-package hr.dreamfactory.lectures.mario.model;
+package hr.dreamfactory.lectures1.mario.model;
 
 public class Banner {
     private String title;

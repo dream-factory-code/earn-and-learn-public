@@ -2,6 +2,7 @@ package hr.dreamfactory.lectures.mario;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import hr.dreamfactory.lectures1.mario.FizzBuzz;
 import org.junit.jupiter.api.Test;
 
 class FizzBuzzTest {

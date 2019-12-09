@@ -1,4 +1,4 @@
-package hr.dreamfactory.lectures.mario;
+package hr.dreamfactory.lectures1.mario;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

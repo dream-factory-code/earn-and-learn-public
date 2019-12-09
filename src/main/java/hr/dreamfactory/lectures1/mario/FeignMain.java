@@ -1,11 +1,11 @@
-package hr.dreamfactory.lectures.mario;
+package hr.dreamfactory.lectures1.mario;
 
 import feign.Feign;
 import feign.gson.GsonDecoder;
 import feign.jaxrs.JAXRSContract;
-import hr.dreamfactory.lectures.mario.api.RecommendationAPI;
-import hr.dreamfactory.lectures.mario.model.BannerResults;
-import hr.dreamfactory.lectures.mario.model.Banner;
+import hr.dreamfactory.lectures1.mario.api.RecommendationAPI;
+import hr.dreamfactory.lectures1.mario.model.BannerResults;
+import hr.dreamfactory.lectures1.mario.model.Banner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
