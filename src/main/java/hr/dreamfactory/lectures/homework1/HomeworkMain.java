@@ -1,16 +1,23 @@
 package hr.dreamfactory.lectures.homework1;
 
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import feign.Feign;
 import feign.gson.GsonDecoder;
 import feign.jaxrs.JAXRSContract;
 import hr.dreamfactory.lectures.homework1.api.RandomUserAPI;
+import hr.dreamfactory.lectures.homework1.common.User;
+import hr.dreamfactory.lectures.homework1.common.Users;
+import hr.dreamfactory.lectures.homework1.model.Location;
+import hr.dreamfactory.lectures.homework1.model.UserModel;
+import hr.dreamfactory.lectures.homework1.model.UsersModel;
 import org.slf4j.LoggerFactory;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.List;
 
 public class HomeworkMain {
 
@@ -23,11 +30,8 @@ public class HomeworkMain {
                 .decoder(new GsonDecoder())
                 .target(RandomUserAPI.class, "https://randomuser.me");
 
-        Users users = api.getUsers("10");
 
-        for (User user : users.getRandomUsers()){
-            System.out.println(user.fullName());
-        }
+        UsersModel users = api.getUsers("10");
 
     }
 

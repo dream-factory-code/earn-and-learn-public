@@ -1,22 +1,33 @@
 
 package hr.dreamfactory.lectures.homework1.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 import hr.dreamfactory.lectures.homework1.common.User;
 
 import java.util.Map;
 
 public class UserModel implements User {
 
-    private Name fullName;
+    @SerializedName("name")
+    @Expose
+    private Name name;
+    @SerializedName("location")
+    @Expose
     private Location location;
+
+    public UserModel(Name name, Location location) {
+        this.name = name;
+        this.location = location;
+    }
 
     @Override
     public String fullName() {
-        return String.format(fullName.getFirstName() + " " + fullName.getLastName());
+        return name.getFirstName() + " " + name.getLastName();
     }
 
     @Override
     public String location() {
-        return String.format(location.getCity() + " " + location.getCountry());
+        return location.getCity() + " " + location.getCountry();
     }
 }

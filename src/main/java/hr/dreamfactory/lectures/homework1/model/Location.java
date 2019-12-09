@@ -1,8 +1,15 @@
 package hr.dreamfactory.lectures.homework1.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class Location {
 
+    @SerializedName("city")
+    @Expose
     private String city;
+    @SerializedName("country")
+    @Expose
     private String country;
 
     public Location(String city, String country) {
