@@ -4,9 +4,6 @@ public class Location {
     String city;
     String country;
 
-    public Location() {
-    }
-
     public String getCity() {
         return city;
     }
