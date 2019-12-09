@@ -7,14 +7,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MockUsers implements Users {
-    private List<User> userList = new ArrayList<>();
+    private static List<User> userList = new ArrayList<>();
 
     @Override
     public List<User> getRandomUsers() {
-        int numOfUsers = (int) (Math.random() * 100 + 1);
-        for (int i = 0; i < numOfUsers; ++i) {
-            userList.add(new MockUser());
-        }
         return userList;
+    }
+
+    public void addMockUser(MockUser user) {
+        userList.add(user);
+    }
+
+    public String serializeUserList() {
+        StringBuilder serialize = new StringBuilder();
+        if (userList.size() < 1){
+            return "List of users is empty.";
+        }
+        for (User user : userList) {
+            serialize.append(user.fullName() + " \"" + user.location() + "\"\n");
+        }
+
+        return serialize.toString();
     }
 }
