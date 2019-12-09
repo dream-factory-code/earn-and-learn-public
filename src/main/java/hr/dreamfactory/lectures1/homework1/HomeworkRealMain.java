@@ -29,7 +29,7 @@ public class HomeworkRealMain {
         }
     }
 
-    private static String getRandomUser(int n) {
+    public static String getRandomUser(int n) {
         RandomUserAPI api = Feign.builder()
                 .contract(new JAXRSContract())
                 .decoder(new GsonDecoder())
