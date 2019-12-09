@@ -2,37 +2,27 @@ package hr.dreamfactory.lectures.homework1.model;
 
 public class Name {
 
-    private String title;
-    private String first;
-    private String last;
+    private String firstName;
+    private String lastName;
 
-    public Name(String title, String first, String last) {
-        this.title = title;
-        this.first = first;
-        this.last = last;
+    public Name(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
-    public String getTitle() {
-        return title;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getFirst() {
-        return first;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setFirst(String first) {
-        this.first = first;
-    }
-
-    public String getLast() {
-        return last;
-    }
-
-    public void setLast(String last) {
-        this.last = last;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }

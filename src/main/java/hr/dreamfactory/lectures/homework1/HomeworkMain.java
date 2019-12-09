@@ -31,9 +31,11 @@ public class HomeworkMain {
                 .decoder(new GsonDecoder())
                 .target(RandomUserAPI.class, "https://randomuser.me");
 
-        JsonObject jsonObject = api.getUsers("10");
+        Users users = api.getUsers("10");
 
-        System.out.println(jsonObject.get("results").getAsJsonArray());
+        for (User user : users.getRandomUsers()){
+            System.out.println(user.fullName());
+        }
 
     }
 

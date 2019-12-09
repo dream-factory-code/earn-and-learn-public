@@ -7,10 +7,25 @@ import java.util.List;
 
 public class UsersModel implements Users {
 
-    List<User> users;
+    List<User> results;
+
+    public UsersModel() {
+    }
 
     @Override
     public List<User> getRandomUsers() {
-        return users;
+        return results;
+    }
+
+    public UsersModel(List<User> results) {
+        this.results = results;
+    }
+
+    public List<User> getResults() {
+        return results;
+    }
+
+    public void setResults(List<User> results) {
+        this.results = results;
     }
 }
