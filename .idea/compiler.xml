@@ -6,11 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="prvopredavanje" />
+        <module name="earn-and-learn-public" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="prvopredavanje" target="8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

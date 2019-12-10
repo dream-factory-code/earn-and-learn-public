@@ -1,30 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6be00392-bf12-414b-9035-d5f6d9a5389c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="410bb004-d2af-4009-9dc4-e6f8ee4136f3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/hr/dreamfactory/lectures/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_core_9_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_gson_9_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_jaxrs_9_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_javax_ws_rs_api_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_jsr311_api_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_rc_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_6_0_M1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_6_0_M1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_6_0_M1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_6_0_M1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_6_0_M1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_6_0_M1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jvnet_animal_sniffer_annotation_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prvopredavanje.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/dreamfactory/lectures/FeignMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/dreamfactory/lectures/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/dreamfactory/lectures/api/RecomendationAPI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/dreamfactory/lectures/model/Banner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/dreamfactory/lectures/model/BannerResults.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hr/dreamfactory/lectures/MainTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/homework01.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/prvopredavanje.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/dreamfactory/lectures/FeignMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/dreamfactory/lectures/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/dreamfactory/lectures/api/RecomendationAPI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/dreamfactory/lectures/model/Banner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hr/dreamfactory/lectures/model/BannerResults.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/logback.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/prvopredavanje.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/hr/dreamfactory/lectures/MainTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +37,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -43,14 +44,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="1UT23jsdnZUtIvO1eAN443jyh9Q" />
+  <component name="ProjectId" id="1UoIdpeh5qEZQm8zsCREtnVsnF9" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -62,42 +56,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="hr.dreamfactory.mia" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="hr.dreamfactory.homework01" />
-      <recent name="hr.dreamfactory.homework.model" />
-      <recent name="hr.dreamfactory.common" />
-      <recent name="hr.dreamfactory.mia.api" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/target" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Demo" />
-      <module name="prvopredavanje" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.FeignMain">
     <configuration name="FeignMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hr.dreamfactory.lectures.FeignMain" />
-      <module name="prvopredavanje" />
+      <module name="earn-and-learn-public" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="hr.dreamfactory.lectures.*" />
@@ -108,56 +74,75 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomeworkMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hr.dreamfactory.homework01.HomeworkMain" />
-      <module name="prvopredavanje" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hr.dreamfactory.homework01.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hr.dreamfactory.lectures.Main" />
-      <module name="prvopredavanje" />
-      <option name="PROGRAM_PARAMETERS" value="3" />
+      <module name="earn-and-learn-public" />
+      <option name="PROGRAM_PARAMETERS" value="10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hr.dreamfactory.lectures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="prvopredavanje" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hr.dreamfactory.lectures.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="hr.dreamfactory.lectures" />
-      <option name="MAIN_CLASS_NAME" value="hr.dreamfactory.lectures.MainTest" />
-      <option name="TEST_OBJECT" value="class" />
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="earn-and-learn-public" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="earn-and-learn-public" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Demo" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.FeignMain" />
-      <item itemvalue="Application.HomeworkMain" />
-      <item itemvalue="JUnit.MainTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.FeignMain" />
-        <item itemvalue="Application.HomeworkMain" />
-        <item itemvalue="JUnit.MainTest" />
-        <item itemvalue="Application.Demo" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -178,16 +163,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6be00392-bf12-414b-9035-d5f6d9a5389c" name="Default Changelist" comment="" />
-      <created>1575366067259</created>
+      <changelist id="410bb004-d2af-4009-9dc4-e6f8ee4136f3" name="Default Changelist" comment="" />
+      <created>1576016610183</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1575366067259</updated>
-      <workItem from="1575366072535" duration="3286000" />
-      <workItem from="1575452805035" duration="8257000" />
-      <workItem from="1575586849598" duration="3414000" />
-      <workItem from="1575591187312" duration="37439000" />
-      <workItem from="1576015397737" duration="761000" />
+      <updated>1576016610183</updated>
+      <workItem from="1576016614000" duration="884000" />
     </task>
     <servers />
   </component>
@@ -195,95 +176,33 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="240" y="67" key="#Project_Structure" timestamp="1575586883379">
+    <state x="240" y="67" key="#Project_Structure" timestamp="1576016974045">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="240" y="67" key="#Project_Structure/0.0.1280.800@0.0.1280.800" timestamp="1575586883379" />
-    <state x="104" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575621936470">
+    <state x="240" y="67" key="#Project_Structure/0.0.1280.800@0.0.1280.800" timestamp="1576016974045" />
+    <state x="104" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576017225355">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="104" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1575621936470" />
-    <state x="453" y="111" key="#com.intellij.ide.util.MemberChooser" timestamp="1575910145220">
+    <state x="104" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1576017225355" />
+    <state x="378" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576017462873">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="453" y="111" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1575910145220" />
-    <state width="1280" height="422" key="GridCell.Tab.0.bottom" timestamp="1576015255053">
+    <state x="378" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1576017462873" />
+    <state width="1280" height="219" key="GridCell.Tab.0.bottom" timestamp="1576017241527">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1280" height="422" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1576015255053" />
-    <state width="1280" height="56" key="GridCell.Tab.0.bottom/0.23.1280.713@0.23.1280.713" timestamp="1575845176483" />
-    <state width="1260" height="317" key="GridCell.Tab.0.bottom/0.23.1280.716@0.23.1280.716" timestamp="1575456776796" />
-    <state width="1260" height="277" key="GridCell.Tab.0.bottom/0.23.1280.721@0.23.1280.721" timestamp="1575458238451" />
-    <state width="1280" height="422" key="GridCell.Tab.0.center" timestamp="1576015255052">
+    <state width="1280" height="219" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1576017241527" />
+    <state width="1280" height="219" key="GridCell.Tab.0.center" timestamp="1576017241525">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1280" height="422" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1576015255052" />
-    <state width="1280" height="56" key="GridCell.Tab.0.center/0.23.1280.713@0.23.1280.713" timestamp="1575845176482" />
-    <state width="1260" height="317" key="GridCell.Tab.0.center/0.23.1280.716@0.23.1280.716" timestamp="1575456776795" />
-    <state width="1260" height="277" key="GridCell.Tab.0.center/0.23.1280.721@0.23.1280.721" timestamp="1575458238450" />
-    <state width="1280" height="422" key="GridCell.Tab.0.left" timestamp="1576015255051">
+    <state width="1280" height="219" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1576017241525" />
+    <state width="1280" height="219" key="GridCell.Tab.0.left" timestamp="1576017241524">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1280" height="422" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1576015255051" />
-    <state width="1280" height="56" key="GridCell.Tab.0.left/0.23.1280.713@0.23.1280.713" timestamp="1575845176481" />
-    <state width="1260" height="317" key="GridCell.Tab.0.left/0.23.1280.716@0.23.1280.716" timestamp="1575456776794" />
-    <state width="1260" height="277" key="GridCell.Tab.0.left/0.23.1280.721@0.23.1280.721" timestamp="1575458238450" />
-    <state width="1280" height="422" key="GridCell.Tab.0.right" timestamp="1576015255053">
+    <state width="1280" height="219" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1576017241524" />
+    <state width="1280" height="219" key="GridCell.Tab.0.right" timestamp="1576017241526">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1280" height="422" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1576015255053" />
-    <state width="1280" height="56" key="GridCell.Tab.0.right/0.23.1280.713@0.23.1280.713" timestamp="1575845176482" />
-    <state width="1260" height="317" key="GridCell.Tab.0.right/0.23.1280.716@0.23.1280.716" timestamp="1575456776796" />
-    <state width="1260" height="277" key="GridCell.Tab.0.right/0.23.1280.721@0.23.1280.721" timestamp="1575458238450" />
-    <state width="1260" height="225" key="GridCell.Tab.1.bottom" timestamp="1575582961180">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state width="1260" height="225" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1575582961180" />
-    <state width="1260" height="225" key="GridCell.Tab.1.bottom/0.23.1280.721@0.23.1280.721" timestamp="1575458062850" />
-    <state width="1260" height="225" key="GridCell.Tab.1.center" timestamp="1575582961137">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state width="1260" height="225" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1575582961137" />
-    <state width="1260" height="225" key="GridCell.Tab.1.center/0.23.1280.721@0.23.1280.721" timestamp="1575458062849" />
-    <state width="1260" height="225" key="GridCell.Tab.1.left" timestamp="1575582961135">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state width="1260" height="225" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1575582961135" />
-    <state width="1260" height="225" key="GridCell.Tab.1.left/0.23.1280.721@0.23.1280.721" timestamp="1575458062848" />
-    <state width="1260" height="225" key="GridCell.Tab.1.right" timestamp="1575582961179">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state width="1260" height="225" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1575582961179" />
-    <state width="1260" height="225" key="GridCell.Tab.1.right/0.23.1280.721@0.23.1280.721" timestamp="1575458062849" />
-    <state x="128" y="0" key="SettingsEditor" timestamp="1575845886006">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="128" y="0" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1575845886006" />
-    <state x="296" y="213" key="com.intellij.ide.util.TipDialog" timestamp="1575586854839">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="296" y="213" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1575586854839" />
-    <state x="296" y="214" key="com.intellij.ide.util.TipDialog/0.23.1280.716@0.23.1280.716" timestamp="1575452806877" />
-    <state x="419" y="136" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1575459533205">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="419" y="136" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.800@0.0.1280.800" timestamp="1575459533205" />
-    <state x="303" y="169" width="673" height="462" key="find.popup" timestamp="1575862268571">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="303" y="169" width="673" height="462" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1575862268571" />
-    <state width="600" height="424" key="javadoc.popup" timestamp="1575459341541">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state width="600" height="424" key="javadoc.popup/0.0.1280.800@0.0.1280.800" timestamp="1575459341541" />
-    <state x="34" y="101" key="new project wizard" timestamp="1576014983592">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="34" y="101" key="new project wizard/0.0.1280.800@0.0.1280.800" timestamp="1576014983592" />
-    <state x="305" y="42" width="670" height="759" key="search.everywhere.popup" timestamp="1575588469489">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="305" y="42" width="670" height="759" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1575588469489" />
-    <state x="305" y="60" width="670" height="676" key="search.everywhere.popup/0.23.1280.713@0.23.1280.713" timestamp="1575455347154" />
+    <state width="1280" height="219" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1576017241526" />
   </component>
 </project>
