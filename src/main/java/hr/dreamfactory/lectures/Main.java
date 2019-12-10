@@ -34,9 +34,9 @@ public class Main {
                 sb.append(i);
             }
             sb.append("\n");
-            if (i % 2 == 0) {
-                LOGGER.debug("iterated over:{}", i);
-            }
+//            if (i % 2 == 0) {
+//                LOGGER.debug("iterated over:{}", i);
+//            }
         }
         return sb.toString();
     }
