@@ -25,4 +25,8 @@ hs_err_pid*
 .idea
 *.iml
 target
+
+# OS generated files #
+.DS_Store
+.DS_Store?
 © 2019 GitHub, Inc.
