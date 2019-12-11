@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import static org.junit.Assert.assertEquals;
 
 
-public class WriterTests {
+public class UsersToCSVTest {
     private UsersToCSV usersToCSV;
 
     @Before
@@ -18,7 +18,7 @@ public class WriterTests {
     }
 
     @Test
-    public void noUsersTest() {
+    public void serializeUsers_noUsersTest() {
         final String expected = "fullname, location";
         final String actual = usersToCSV.serializeUsers(new ArrayList<>());
 
@@ -26,7 +26,7 @@ public class WriterTests {
     }
 
     @Test
-    public void singleUserTest() {
+    public void serializeUsers_singleUserTest() {
         MockUsers users = new MockUsers(new ArrayList<>());
         users.addUser(new MockUser("Ivan", "Ivanović", "Ivanić Grad, Croatia"));
 
@@ -37,7 +37,7 @@ public class WriterTests {
     }
 
     @Test
-    public void multipleUsersTest() {
+    public void serializeUsers_multipleUsersTest() {
         MockUsers users = new MockUsers(new ArrayList<>());
         users.addUser(new MockUser("Ivan", "Ivanović", "Ivanić Grad, Croatia"));
         users.addUser(new MockUser("Ivan", "Ivanović", "Ivanić Grad, Croatia"));
