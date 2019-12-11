@@ -9,6 +9,14 @@ import java.util.List;
 public class MockUsers implements Users {
     private List<User> users = new ArrayList<>();
 
+    public MockUsers(List<User> users) {
+        this.users = users;
+    }
+
+    public MockUsers() {
+        users.add(new MockUser());
+    }
+
     public void addUser(User user) {
         users.add(user);
     }

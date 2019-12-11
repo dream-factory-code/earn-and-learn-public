@@ -8,6 +8,9 @@ public class MockUser implements User {
     private String location;
 
     public MockUser() {
+        firstName = "Vice";
+        lastName = "Šimunov";
+        location = "Bali, Somewhere on Bali";
     }
 
     public MockUser(String firstName, String lastName, String location) {
