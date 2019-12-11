@@ -21,7 +21,7 @@ public class UserModel implements User {
 
     @Override
     public String location() {
-        return location.getCity() + " " + location.getCountry();
+        return location.getCity() + ", " + location.getCountry();
     }
 
     public Name getName() {
@@ -39,4 +39,6 @@ public class UserModel implements User {
     public void setLocation(Location location) {
         this.location = location;
     }
+
+
 }
