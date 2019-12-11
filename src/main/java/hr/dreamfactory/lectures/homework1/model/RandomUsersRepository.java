@@ -9,13 +9,18 @@ import hr.dreamfactory.lectures.homework1.common.Users;
 
 import java.util.List;
 
-public class UserRepository implements Users {
-    public static final int RESULTS = 10;
+public class RandomUsersRepository implements Users {
+    public final int results;
     public static final String API_ENDPOINT = "https://randomuser.me/";
 
     private final UserAPI api;
 
-    public UserRepository() {
+    public RandomUsersRepository() {
+        this(10);
+    }
+
+    public RandomUsersRepository(int results) {
+        this.results = results;
         api = Feign.builder()
                 .contract(new JAXRSContract())
                 .decoder(new GsonDecoder())
@@ -24,6 +29,6 @@ public class UserRepository implements Users {
 
     @Override
     public List<? extends User> getRandomUsers() {
-        return api.getUsers(RESULTS).getResults();
+        return api.getUsers(results).getResults();
     }
 }

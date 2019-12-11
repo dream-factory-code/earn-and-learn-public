@@ -1,6 +1,7 @@
 package hr.dreamfactory.lectures.homework1.model;
 
-import hr.dreamfactory.lectures.homework1.HomeworkMain;
+import hr.dreamfactory.lectures.homework1.controllers.UsersToCSV;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -9,10 +10,17 @@ import static org.junit.Assert.assertEquals;
 
 
 public class WriterTests {
+    private UsersToCSV usersToCSV;
+
+    @Before
+    public void setup(){
+        usersToCSV = new UsersToCSV("chicken.csv", new MockUsers());
+    }
+
     @Test
     public void noUsersTest() {
         final String expected = "fullname, location";
-        final String actual = HomeworkMain.serializeUsers(new ArrayList<>());
+        final String actual = usersToCSV.serializeUsers(new ArrayList<>());
 
         assertEquals(expected, actual);
     }
@@ -24,7 +32,7 @@ public class WriterTests {
 
         final String expected = "fullname, location\n" +
                 "\"Ivan Ivanović\", \"Ivanić Grad, Croatia\"";
-        final String actual = HomeworkMain.serializeUsers(users.getRandomUsers());
+        final String actual = usersToCSV.serializeUsers(users.getRandomUsers());
         assertEquals(expected, actual);
     }
 
@@ -39,7 +47,7 @@ public class WriterTests {
                 "\"Ivan Ivanović\", \"Ivanić Grad, Croatia\"\n" +
                 "\"Ivan Ivanović\", \"Ivanić Grad, Croatia\"\n" +
                 "\"Ivan Ivanović\", \"Ivanić Grad, Croatia\"";
-        final String actual = HomeworkMain.serializeUsers(users.getRandomUsers());
+        final String actual = usersToCSV.serializeUsers(users.getRandomUsers());
 
         assertEquals(expected, actual);
     }
