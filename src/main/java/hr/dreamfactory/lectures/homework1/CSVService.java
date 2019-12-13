@@ -22,13 +22,13 @@ public class CSVService {
 
     public void writeToCSV(String listUsers, String filePath) {
         File csvfile = new File(filePath);
-        try {
-            BufferedWriter bfw = new BufferedWriter(new FileWriter(csvfile));
+        try (BufferedWriter bfw = new BufferedWriter(new FileWriter(csvfile))) {
             String[] header = {"fullname", "location"};
+
             bfw.write(header[0] + ", " + header[1]);
             bfw.newLine();
+
             bfw.write(listUsers);
-            bfw.close();
         } catch (IOException e) {
             LOGGER.error(e.toString());
         }
