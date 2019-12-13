@@ -1,4 +1,4 @@
-package hr.dreamfactory.lectures.homework1.common;
+package hr.dreamfactory.lectures.homework1.model.common;
 
 public interface User {
     String fullName();

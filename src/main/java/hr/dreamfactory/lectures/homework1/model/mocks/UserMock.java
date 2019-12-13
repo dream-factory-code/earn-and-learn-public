@@ -1,6 +1,6 @@
-package hr.dreamfactory.lectures.homework1.model;
+package hr.dreamfactory.lectures.homework1.model.mocks;
 
-import hr.dreamfactory.lectures.homework1.common.User;
+import hr.dreamfactory.lectures.homework1.model.common.User;
 
 public class UserMock implements User {
 
@@ -12,9 +12,5 @@ public class UserMock implements User {
     @Override
     public String location() {
         return "Zagreb, Croatia";
-    }
-
-    public String serializeToCSV() {
-        return "\"" + fullName() + "\", \"" + location() + "\"";
     }
 }

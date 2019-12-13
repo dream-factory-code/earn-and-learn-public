@@ -1,14 +1,17 @@
 package hr.dreamfactory.lectures.homework1.model;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import hr.dreamfactory.lectures.homework1.services.CSVService;
+import hr.dreamfactory.lectures.homework1.model.mocks.UserMock;
+import org.junit.Assert;
+import org.junit.Test;
 
-class UserMockTest {
+public class UserMockTest {
 
     @Test
     public void deserializeTest() {
+        CSVService service = new CSVService();
         UserMock userMock = new UserMock();
-        Assertions.assertEquals("\"Marko Markić\", \"Zagreb, Croatia\"", userMock.serializeToCSV());
+        Assert.assertEquals("\"Marko Markić\", \"Zagreb, Croatia\"", service.serializeToCSV(userMock));
     }
 
 }

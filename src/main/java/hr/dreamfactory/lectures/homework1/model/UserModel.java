@@ -1,6 +1,6 @@
 package hr.dreamfactory.lectures.homework1.model;
 
-import hr.dreamfactory.lectures.homework1.common.User;
+import hr.dreamfactory.lectures.homework1.model.common.User;
 
 public class UserModel implements User {
     private Name name;
@@ -44,9 +44,5 @@ public class UserModel implements User {
                 "name=" + name +
                 ", location=" + location +
                 '}';
-    }
-
-    public String serializeToCSV() {
-        return "\"" + fullName() + "\", \"" + location() + "\"";
     }
 }
