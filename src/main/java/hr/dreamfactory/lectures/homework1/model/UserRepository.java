@@ -28,7 +28,8 @@ public class UserRepository implements Users {
 
     @Override
     public List<? extends User> getRandomUsers() {
-        return api.getResults(results).getResults();
+        return api.getResults(results)
+                .getResults();
 
     }
 }
