@@ -6,15 +6,15 @@ import hr.dreamfactory.lectures.homework1.common.Users;
 
 import java.util.List;
 
-public class RandomUsersRepository implements Users {
+public class ApacheUsersRepository implements Users {
     public final int results;
     private final ApacheUserAPI api;
 
-    public RandomUsersRepository() {
+    public ApacheUsersRepository() {
         this(10);
     }
 
-    public RandomUsersRepository(int results) {
+    public ApacheUsersRepository(int results) {
         this.results = results;
         api = new ApacheUserAPI();
     }
