@@ -1,11 +1,8 @@
 package hr.dreamfactory.lectures.homework1.api;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import hr.dreamfactory.lectures.homework1.common.User;
-import hr.dreamfactory.lectures.homework1.controllers.UsersToCSV;
+import com.google.gson.JsonParseException;
 import hr.dreamfactory.lectures.homework1.model.UserResults;
-import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -15,23 +12,22 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.List;
 
 public class ApacheUserAPI {
     private static final Logger LOGGER = LoggerFactory.getLogger(ApacheUserAPI.class);
 
-    private String BASE_URL = "https://randomuser.me/api/?results=10";
     private final CloseableHttpClient httpClient = HttpClients.createDefault();
+    private String BASE_URL = "https://randomuser.me/api/";
 
     public UserResults getUsers(int numberOfResults) {
         HttpGet request = null;
 
         try {
             URIBuilder builder = new URIBuilder(BASE_URL).setParameter("results", String.valueOf(numberOfResults));
-            request =  new HttpGet(builder.build());
-
+            request = new HttpGet(builder.build());
         } catch (URISyntaxException e) {
             LOGGER.error("Wrong URL syntax!");
         }
@@ -45,10 +41,11 @@ public class ApacheUserAPI {
                 UserResults userResults = gson.fromJson(result, UserResults.class);
                 return userResults;
             }
+        } catch (IOException e) {
+            LOGGER.error("Error occurred during reading input stream!");
         }
-        catch (IOException e) {
-            return  null;
-        }
-        return null;
+
+        LOGGER.error("JSON returned from API cannot be parsed to UserResults object.");
+        throw new JsonParseException("JSON returned from API cannot be parsed to UserResults object.");
     }
 }
