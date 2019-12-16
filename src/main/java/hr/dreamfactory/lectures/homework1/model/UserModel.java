@@ -1,5 +1,6 @@
 package hr.dreamfactory.lectures.homework1.model;
 
+import com.univocity.parsers.annotations.Parsed;
 import hr.dreamfactory.lectures.homework1.model.common.User;
 
 public class UserModel implements User {

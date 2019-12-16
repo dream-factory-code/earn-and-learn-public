@@ -6,6 +6,9 @@ import hr.dreamfactory.lectures.homework1.model.common.Users;
 import hr.dreamfactory.lectures.homework1.services.CSVService;
 import hr.dreamfactory.lectures.homework1.services.UnivocityCSVService;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class Main {
     private static final String FILE_PATH = "./ducks.csv";
     private static final String BASE_URL = "https://randomuser.me/";
