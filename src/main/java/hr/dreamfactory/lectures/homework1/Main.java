@@ -1,5 +1,6 @@
 package hr.dreamfactory.lectures.homework1;
 
+import hr.dreamfactory.lectures.homework1.api.HttpRepository;
 import hr.dreamfactory.lectures.homework1.model.common.Users;
 import hr.dreamfactory.lectures.homework1.model.mocks.UsersMock;
 import hr.dreamfactory.lectures.homework1.services.CSVService;
@@ -14,11 +15,11 @@ public class Main {
 
     private static final CSVService service = new CSVService();
 
-    public static void main(String[] args) {
-        Users userRepository = new UsersMock();
+    public static void main(String[] args) throws Exception {
+        HttpRepository httpRep = new HttpRepository(BASE_URL, NUM_OF_USERS);
 
         Path output = Paths.get(FILE_PATH);
-        service.writeToCSVFile(output, ( userRepository).getRandomUsers());
+        service.writeToCSVFile(output, (httpRep).getRandomUsers());
     }
 
 
