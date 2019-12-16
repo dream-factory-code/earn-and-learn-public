@@ -7,6 +7,7 @@ public class UserModel implements User {
     private Name name;
     private Location location;
 
+    @Parsed
     @Override
     public String fullName() {
         StringBuilder fullname = new StringBuilder(name.getFirst())
@@ -15,6 +16,7 @@ public class UserModel implements User {
         return fullname.toString();
     }
 
+    @Parsed
     @Override
     public String location() {
         StringBuilder loc = new StringBuilder(location.getCity())
