@@ -1,5 +1,7 @@
 package hr.dreamfactory.lectures.homework1.model;
 
+import com.univocity.parsers.annotations.Parsed;
+
 public class Name {
 
     private String first;

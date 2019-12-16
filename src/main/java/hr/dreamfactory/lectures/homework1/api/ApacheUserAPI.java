@@ -45,7 +45,7 @@ public class ApacheUserAPI {
             LOGGER.error("Error occurred during reading input stream!");
         }
 
-        LOGGER.error("JSON returned from API cannot be parsed to UserResults object.");
-        throw new JsonParseException("JSON returned from API cannot be parsed to UserResults object.");
+        LOGGER.warn("JSON returned from API cannot be parsed to UserResults object.");
+        return null;
     }
 }
