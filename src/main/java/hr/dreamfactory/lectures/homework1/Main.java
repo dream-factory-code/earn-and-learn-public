@@ -1,11 +1,9 @@
 package hr.dreamfactory.lectures.homework1;
 
+import hr.dreamfactory.lectures.homework1.api.UserRepository;
 import hr.dreamfactory.lectures.homework1.model.common.Users;
-import hr.dreamfactory.lectures.homework1.model.mocks.UsersMock;
 import hr.dreamfactory.lectures.homework1.services.CSVService;
-
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import hr.dreamfactory.lectures.homework1.services.UnivocityCSVService;
 
 public class Main {
     private static final String FILE_PATH = "./ducks.csv";
@@ -13,13 +11,14 @@ public class Main {
     private static final Long NUM_OF_USERS = 10l;
 
     private static final CSVService service = new CSVService();
+    private static final UnivocityCSVService univocityCSVService = new UnivocityCSVService();
 
     public static void main(String[] args) {
-        Users userRepository = new UsersMock();
+        Users userRepository = new UserRepository(BASE_URL, NUM_OF_USERS);
 
-        Path output = Paths.get(FILE_PATH);
-        service.writeToCSVFile(output, ( userRepository).getRandomUsers());
+        univocityCSVService.writeToCSV(FILE_PATH, userRepository.getRandomUsers());
+
+        //Path output = Paths.get(FILE_PATH);
+        //service.writeToCSVFile(output, ( userRepository).getRandomUsers());
     }
-
-
 }
