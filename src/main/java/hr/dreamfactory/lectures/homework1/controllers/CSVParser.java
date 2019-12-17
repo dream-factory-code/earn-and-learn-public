@@ -4,8 +4,8 @@ import com.univocity.parsers.common.processor.BeanWriterProcessor;
 import com.univocity.parsers.csv.CsvFormat;
 import com.univocity.parsers.csv.CsvWriter;
 import com.univocity.parsers.csv.CsvWriterSettings;
-import hr.dreamfactory.lectures.homework1.common.Users;
-import hr.dreamfactory.lectures.homework1.model.UserModel;
+import hr.dreamfactory.lectures.homework1.common.UserGenerator;
+import hr.dreamfactory.lectures.homework1.model.User;
 
 import java.io.File;
 import java.util.List;
@@ -13,17 +13,17 @@ import java.util.List;
 
 public class CSVParser {
 
-    private Users repository;
+    private UserGenerator repository;
     private String filename;
 
-    public CSVParser(String filename, Users repository) {
+    public CSVParser(String filename, UserGenerator repository) {
         this.repository = repository;
         this.filename = filename;
     }
 
     public void serialize() {
-        List<UserModel> userList = (List<UserModel>) repository.getRandomUsers();
-        BeanWriterProcessor<UserModel> beanWriter = new BeanWriterProcessor<UserModel>(UserModel.class);
+        List<User> userList = repository.generate();
+        BeanWriterProcessor<User> beanWriter = new BeanWriterProcessor<>(User.class);
         beanWriter.initialize();
 
         CsvWriterSettings settings = new CsvWriterSettings();

@@ -1,12 +1,11 @@
 package hr.dreamfactory.lectures.homework1.model;
 
 import hr.dreamfactory.lectures.homework1.api.ApacheUserAPI;
-import hr.dreamfactory.lectures.homework1.common.User;
-import hr.dreamfactory.lectures.homework1.common.Users;
+import hr.dreamfactory.lectures.homework1.common.UserGenerator;
 
 import java.util.List;
 
-public class ApacheUsersRepository implements Users {
+public class ApacheUsersRepository implements UserGenerator {
     public final int results;
     private final ApacheUserAPI api;
 
@@ -20,7 +19,7 @@ public class ApacheUsersRepository implements Users {
     }
 
     @Override
-    public List<? extends User> getRandomUsers() {
+    public List<User> generate() {
         return api.getUsers(results).getResults();
     }
 }

@@ -1,8 +1,6 @@
 package hr.dreamfactory.lectures.homework1.api;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonParseException;
-import hr.dreamfactory.lectures.homework1.model.UserResults;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -22,7 +20,7 @@ public class ApacheUserAPI {
     private final CloseableHttpClient httpClient = HttpClients.createDefault();
     private String BASE_URL = "https://randomuser.me/api/";
 
-    public UserResults getUsers(int numberOfResults) {
+    public UserAPIResponse getUsers(int numberOfResults) {
         HttpGet request = null;
 
         try {
@@ -38,14 +36,14 @@ public class ApacheUserAPI {
             if (entity != null) {
                 String result = EntityUtils.toString(entity);
                 Gson gson = new Gson();
-                UserResults userResults = gson.fromJson(result, UserResults.class);
-                return userResults;
+                UserAPIResponse APIResponse = gson.fromJson(result, UserAPIResponse.class);
+                return APIResponse;
             }
         } catch (IOException e) {
             LOGGER.error("Error occurred during reading input stream!");
         }
 
-        LOGGER.warn("JSON returned from API cannot be parsed to UserResults object.");
+        LOGGER.warn("JSON returned from API cannot be parsed to UserAPIResponse object.");
         return null;
     }
 }

@@ -32,7 +32,7 @@ public class UsersToCSVTest {
 
         final String expected = "fullname, location\n" +
                 "\"Ivan Ivanović\", \"Ivanić Grad, Croatia\"";
-        final String actual = usersToCSV.serializeUsers(users.getRandomUsers());
+        final String actual = usersToCSV.serializeUsers(users.generate());
         assertEquals(expected, actual);
     }
 
@@ -47,7 +47,7 @@ public class UsersToCSVTest {
                 "\"Ivan Ivanović\", \"Ivanić Grad, Croatia\"\n" +
                 "\"Ivan Ivanović\", \"Ivanić Grad, Croatia\"\n" +
                 "\"Ivan Ivanović\", \"Ivanić Grad, Croatia\"";
-        final String actual = usersToCSV.serializeUsers(users.getRandomUsers());
+        final String actual = usersToCSV.serializeUsers(users.generate());
 
         assertEquals(expected, actual);
     }

@@ -1,7 +1,7 @@
 package hr.dreamfactory.lectures.homework1.controllers;
 
-import hr.dreamfactory.lectures.homework1.common.User;
-import hr.dreamfactory.lectures.homework1.common.Users;
+import hr.dreamfactory.lectures.homework1.common.UserGenerator;
+import hr.dreamfactory.lectures.homework1.model.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,23 +14,23 @@ public class UsersToCSV {
     private static final Logger LOGGER = LoggerFactory.getLogger(UsersToCSV.class);
 
     private String filename;
-    private Users userRepository;
+    private UserGenerator userRepository;
 
-    public UsersToCSV(String filename, Users userRepository) {
+    public UsersToCSV(String filename, UserGenerator userRepository) {
         this.filename = filename;
         this.userRepository = userRepository;
     }
 
     public void serialize(){
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
-            writer.write(serializeUsers(userRepository.getRandomUsers()));
+            writer.write(serializeUsers(userRepository.generate()));
             LOGGER.info("Users written to .csv");
         } catch (IOException e) {
             LOGGER.error("Something went wrong :( ", e);
         }
     }
 
-    public static String serializeUsers(List<? extends User> users) {
+    public static String serializeUsers(List<User> users) {
         StringBuilder result = new StringBuilder();
 
         result.append("fullname, location");

@@ -1,10 +1,8 @@
 package hr.dreamfactory.lectures.homework1.model;
 
-import com.univocity.parsers.annotations.Nested;
 import com.univocity.parsers.annotations.Parsed;
-import hr.dreamfactory.lectures.homework1.common.User;
 
-public class UserModel implements User {
+public class User {
 
     private Name name;
 
@@ -26,14 +24,12 @@ public class UserModel implements User {
         this.location = location;
     }
 
-    @Override
     @Parsed(field = "fullname")
     public String fullName() {
         return String.format(name.getFirst() + " " + name.getLast());
     }
 
     @Parsed(field = "location")
-    @Override
     public String location() {
         return String.format(location.getCity() + ", " + location.getCountry());
     }
