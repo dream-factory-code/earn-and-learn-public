@@ -3,7 +3,6 @@ package hr.dreamfactory.lectures.homework1.api;
 import feign.Feign;
 import feign.gson.GsonDecoder;
 import feign.jaxrs.JAXRSContract;
-import hr.dreamfactory.lectures.homework1.api.UserAPI;
 import hr.dreamfactory.lectures.homework1.common.UserGenerator;
 import hr.dreamfactory.lectures.homework1.model.User;
 

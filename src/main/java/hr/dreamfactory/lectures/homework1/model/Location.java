@@ -1,9 +1,13 @@
 package hr.dreamfactory.lectures.homework1.model;
 
+import com.univocity.parsers.annotations.Parsed;
+
 public class Location {
 
+    @Parsed
     private String city;
 
+    @Parsed
     private String country;
 
     public String getCity() {

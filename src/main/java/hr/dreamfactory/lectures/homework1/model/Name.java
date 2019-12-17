@@ -4,8 +4,10 @@ import com.univocity.parsers.annotations.Parsed;
 
 public class Name {
 
+    @Parsed
     private String first;
 
+    @Parsed
     private String last;
 
     public String getFirst() {

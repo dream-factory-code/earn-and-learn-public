@@ -9,7 +9,6 @@ import hr.dreamfactory.lectures.homework1.model.User;
 import java.io.File;
 import java.util.List;
 
-
 public class CSVParser {
 
     private UserGenerator repository;
@@ -29,7 +28,12 @@ public class CSVParser {
         settings.setRowWriterProcessor(beanWriter);
 
         CsvWriter writer = new CsvWriter(new File(filename), settings);
+        writer.writeHeaders();
         writer.processRecords(userList);
         writer.close();
+    }
+
+    public void parse(String filename){
+
     }
 }

@@ -4,12 +4,12 @@ import com.google.gson.annotations.SerializedName;
 import com.univocity.parsers.annotations.Nested;
 import com.univocity.parsers.annotations.Parsed;
 
-import javax.ws.rs.Path;
-
 public class User {
 
+    @Nested
     private Name name;
 
+    @Nested
     private Location location;
 
     @Parsed
@@ -72,15 +72,5 @@ public class User {
 
     public void setLocation(Location location) {
         this.location = location;
-    }
-
-    @Parsed(field = "fullname", index = 0)
-    public String fullName() {
-        return String.format(name.getFirst() + " " + name.getLast());
-    }
-
-    @Parsed(field = "location", index = 1)
-    public String location() {
-        return String.format(location.getCity() + ", " + location.getCountry());
     }
 }
