@@ -24,12 +24,12 @@ public class User {
         this.location = location;
     }
 
-    @Parsed(field = "fullname")
+    @Parsed(field = "fullname", index = 0)
     public String fullName() {
         return String.format(name.getFirst() + " " + name.getLast());
     }
 
-    @Parsed(field = "location")
+    @Parsed(field = "location", index = 1)
     public String location() {
         return String.format(location.getCity() + ", " + location.getCountry());
     }

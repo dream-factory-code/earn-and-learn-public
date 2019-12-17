@@ -1,7 +1,6 @@
 package hr.dreamfactory.lectures.homework1.controllers;
 
 import com.univocity.parsers.common.processor.BeanWriterProcessor;
-import com.univocity.parsers.csv.CsvFormat;
 import com.univocity.parsers.csv.CsvWriter;
 import com.univocity.parsers.csv.CsvWriterSettings;
 import hr.dreamfactory.lectures.homework1.common.UserGenerator;
@@ -28,16 +27,9 @@ public class CSVParser {
 
         CsvWriterSettings settings = new CsvWriterSettings();
         settings.setRowWriterProcessor(beanWriter);
-        settings.setHeaders("fullname", "location");
-        settings.setQuotationTriggers(',', ' ');
-        CsvFormat format = new CsvFormat();
-        format.setDelimiter(", ");
-        settings.setFormat(format);
 
         CsvWriter writer = new CsvWriter(new File(filename), settings);
-        writer.writeHeaders();
         writer.processRecords(userList);
         writer.close();
-
     }
 }
