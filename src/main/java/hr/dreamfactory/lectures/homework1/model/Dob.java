@@ -1,25 +1,27 @@
 package hr.dreamfactory.lectures.homework1.model;
 
-import com.univocity.parsers.annotations.Nested;
 import com.univocity.parsers.annotations.Parsed;
-
-import java.sql.Timestamp;
 
 public class Dob {
     @Parsed
-    private Timestamp date;
+    private String date;
+
     @Parsed
     private String age;
 
-    public Dob(Timestamp date) {
-        this.date = date;
-    }
-
-    public Timestamp getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Timestamp date) {
+    public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
     }
 }
