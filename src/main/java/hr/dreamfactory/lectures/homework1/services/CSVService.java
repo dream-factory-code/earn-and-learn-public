@@ -37,4 +37,5 @@ public class CSVService {
     public String serializeToCSV(User user) {
         return "\"" + user.fullName() + "\", \"" + user.location() + "\"";
     }
+
 }
