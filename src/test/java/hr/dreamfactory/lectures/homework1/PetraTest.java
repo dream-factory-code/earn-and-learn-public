@@ -1,3 +1,5 @@
+package hr.dreamfactory.lectures.homework1;
+
 import hr.dreamfactory.lectures.homework1.api.RemoteRandomGenerator;
 import hr.dreamfactory.lectures.homework1.controllers.CSVParser;
 import hr.dreamfactory.lectures.homework1.model.User;
