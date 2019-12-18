@@ -34,7 +34,7 @@ public class CSVParser {
         writeUsersToCSV(allUsers);
     }
 
-    private void writeUsersToCSV(List<User> userList) {
+    public void writeUsersToCSV(List<User> userList) {
         BeanWriterProcessor<User> beanWriter = new BeanWriterProcessor<>(User.class);
         beanWriter.initialize();
 
