@@ -24,17 +24,17 @@ public class CSVParser {
         this.filename = filename;
     }
 
-    public void generateUsersAndSave() {
+    public void generateUsersAndSave(int batches) {
         List<User> allUsers = new ArrayList<>();
 
-        for (int i = 0; i < 20; i++){
+        for (int i = 0; i < batches; i++){
             allUsers.addAll(repository.generate());
         }
 
         writeUsersToCSV(allUsers);
     }
 
-    private void writeUsersToCSV(List<User> userList) {
+    public void writeUsersToCSV(List<User> userList) {
         BeanWriterProcessor<User> beanWriter = new BeanWriterProcessor<>(User.class);
         beanWriter.initialize();
 
