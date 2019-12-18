@@ -17,14 +17,12 @@ public class HomeworkMain {
         //new CSVParser("chicken.csv", new RemoteRandomGenerator(10)).
         //        generateUsersAndSave();
 
-        List<User> parse = new CSVParser("chicken.csv", new RemoteRandomGenerator(10)).parse();
+        CSVParser csvParser = new CSVParser("chicken-for-tests.csv",
+                new RemoteRandomGenerator(1000));
 
-         long phones = parse.stream()
-                .map(t -> t.getName().getLast())
-                .distinct()
-                .count();
+        csvParser.generateUsersAndSave(20);
 
-        LOGGER.info("Size of list: {}, Number of phones: {}" , parse.size(), phones);
+
     }
 
 
