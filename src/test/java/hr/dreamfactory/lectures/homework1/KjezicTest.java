@@ -35,6 +35,7 @@ public class KjezicTest {
         List<User> users = parser.parse("chicken-for-tests.csv");
 
         Map<String, Long> females = users.stream()
+                .filter(t -> "female".equals(t.getGender()))
                 .collect(Collectors.groupingBy(t -> t.getLocation().getCity(), Collectors.counting()));
 
         Map<String, Long> femalesSorted = females.entrySet()
