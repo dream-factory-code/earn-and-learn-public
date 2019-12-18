@@ -16,13 +16,4 @@ public class UserMockTest {
         Assert.assertEquals("\"Marko Markić\", \"Zagreb, Croatia\"", service.serializeToCSV(userMock));
     }
 
-    @Test
-    public void testLuka(){
-        try (Luka luka = new Luka()) {
-
-        } catch (IOException e) {
-            // haha
-        }
-    }
-
 }
