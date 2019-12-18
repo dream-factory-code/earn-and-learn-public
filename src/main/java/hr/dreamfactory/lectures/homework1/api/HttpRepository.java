@@ -13,30 +13,33 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 
 public class HttpRepository implements Users {
     private final long size;
     private String urlPath;
     private final CloseableHttpClient httpClient = HttpClients.createDefault();
-    private UserModels results;
 
-    public HttpRepository(String urlPath, Long size) throws Exception {
+    public HttpRepository(String urlPath, Long size) {
         this.size = size;
         this.urlPath = urlPath;
-        results = new UserModels();
-        sendGet();
     }
 
     @Override
     public List<? extends User> getRandomUsers() {
-        return results.getResults();
+        try {
+            return sendGet().getResults();
+        } catch (Exception e) {
+            // log it. ha.
+        }
+        return new ArrayList<>();
     }
 
-    private void sendGet() throws Exception {
+    private UserModels sendGet() throws Exception {
         URI uri = new URIBuilder(urlPath)
                 .setPath("api/")
-                .setParameter("results", "10")
+                .setParameter("results", String.valueOf(size))
                 .build();
 
         HttpGet request = new HttpGet(uri);
@@ -44,12 +47,7 @@ public class HttpRepository implements Users {
         try (CloseableHttpResponse response =  httpClient.execute(request)) {
             HttpEntity entity = response.getEntity();
             String result = EntityUtils.toString(entity);
-            results = new Gson().fromJson(result, UserModels.class);
+            return new Gson().fromJson(result, UserModels.class);
         }
-
     }
-
-
-
-
 }
