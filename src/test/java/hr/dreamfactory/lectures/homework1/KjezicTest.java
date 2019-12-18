@@ -41,6 +41,6 @@ public class KjezicTest {
                 .stream()
                 .sorted(reverseOrder(Map.Entry.comparingByValue()))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
-        femalesSorted.entrySet().forEach(t -> LOGGER.info("There are {} in {}", t.getValue(), t.getKey()));
+        femalesSorted.entrySet().forEach(t -> LOGGER.info("There are {} females in {}", t.getValue(), t.getKey()));
     }
 }
