@@ -29,7 +29,7 @@ public class BartolTest {
     @Test
     public void filterIranians() {
         List<User> iranians = allUsers.stream()
-                .filter(t -> t.getNationality().equals("IR"))
+                .filter(t -> "IR".equals(t.getNationality()))
                 .collect(Collectors.toList());
 
         csvParser.writeUsersToCSV(iranians);
@@ -38,6 +38,7 @@ public class BartolTest {
     @Test
     public void mapWomanNumberByCity() {
         Map<String, Long> womanNumberByCity = allUsers.stream()
+                .filter(t -> "female".equals(t.getGender()))
                 .collect(Collectors.groupingBy(t -> t.getLocation().getCity(), Collectors.counting()));
 
         Comparator<Map.Entry<String, Long>> womanCityComparator = Comparator.comparingLong(Map.Entry::getValue);
