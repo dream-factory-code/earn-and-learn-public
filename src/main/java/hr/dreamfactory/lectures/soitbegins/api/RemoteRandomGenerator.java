@@ -1,10 +1,10 @@
-package hr.dreamfactory.lectures.homework1.api;
+package hr.dreamfactory.lectures.soitbegins.api;
 
 import feign.Feign;
 import feign.gson.GsonDecoder;
 import feign.jaxrs.JAXRSContract;
-import hr.dreamfactory.lectures.homework1.common.UserGenerator;
-import hr.dreamfactory.lectures.homework1.model.User;
+import hr.dreamfactory.lectures.soitbegins.common.UserGenerator;
+import hr.dreamfactory.lectures.soitbegins.model.User;
 
 import java.util.List;
 

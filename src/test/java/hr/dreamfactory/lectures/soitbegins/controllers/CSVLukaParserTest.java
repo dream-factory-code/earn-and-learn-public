@@ -1,19 +1,15 @@
-package hr.dreamfactory.lectures.homework1.controllers;
+package hr.dreamfactory.lectures.soitbegins.controllers;
 
-import hr.dreamfactory.lectures.homework1.HomeworkMain;
-import hr.dreamfactory.lectures.homework1.api.RemoteRandomGenerator;
-import hr.dreamfactory.lectures.homework1.model.Location;
-import hr.dreamfactory.lectures.homework1.model.User;
+import hr.dreamfactory.lectures.soitbegins.api.RemoteRandomGenerator;
+import hr.dreamfactory.lectures.soitbegins.model.User;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.FilenameFilter;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
 

@@ -1,4 +1,4 @@
-package hr.dreamfactory.lectures.homework1.model;
+package hr.dreamfactory.lectures.soitbegins.model;
 
 import java.util.ArrayList;
 import java.util.List;

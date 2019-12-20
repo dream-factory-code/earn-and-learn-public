@@ -1,4 +1,4 @@
-package hr.dreamfactory.lectures.homework1.api;
+package hr.dreamfactory.lectures.soitbegins.api;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

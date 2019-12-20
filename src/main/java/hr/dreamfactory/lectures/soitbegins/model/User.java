@@ -1,4 +1,4 @@
-package hr.dreamfactory.lectures.homework1.model;
+package hr.dreamfactory.lectures.soitbegins.model;
 
 import com.google.gson.annotations.SerializedName;
 import com.univocity.parsers.annotations.Nested;

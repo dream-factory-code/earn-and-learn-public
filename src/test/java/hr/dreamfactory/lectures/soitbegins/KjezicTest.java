@@ -1,8 +1,8 @@
-package hr.dreamfactory.lectures.homework1;
+package hr.dreamfactory.lectures.soitbegins;
 
-import hr.dreamfactory.lectures.homework1.api.RemoteRandomGenerator;
-import hr.dreamfactory.lectures.homework1.controllers.CSVParser;
-import hr.dreamfactory.lectures.homework1.model.User;
+import hr.dreamfactory.lectures.soitbegins.api.RemoteRandomGenerator;
+import hr.dreamfactory.lectures.soitbegins.controllers.CSVParser;
+import hr.dreamfactory.lectures.soitbegins.model.User;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

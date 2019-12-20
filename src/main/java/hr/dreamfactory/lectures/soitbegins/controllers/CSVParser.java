@@ -1,4 +1,4 @@
-package hr.dreamfactory.lectures.homework1.controllers;
+package hr.dreamfactory.lectures.soitbegins.controllers;
 
 import com.univocity.parsers.common.processor.BeanListProcessor;
 import com.univocity.parsers.common.processor.BeanWriterProcessor;
@@ -6,8 +6,8 @@ import com.univocity.parsers.csv.CsvParser;
 import com.univocity.parsers.csv.CsvParserSettings;
 import com.univocity.parsers.csv.CsvWriter;
 import com.univocity.parsers.csv.CsvWriterSettings;
-import hr.dreamfactory.lectures.homework1.common.UserGenerator;
-import hr.dreamfactory.lectures.homework1.model.User;
+import hr.dreamfactory.lectures.soitbegins.common.UserGenerator;
+import hr.dreamfactory.lectures.soitbegins.model.User;
 
 import java.io.File;
 import java.nio.file.Paths;
