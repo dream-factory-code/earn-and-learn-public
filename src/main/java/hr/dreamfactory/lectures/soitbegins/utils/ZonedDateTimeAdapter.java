@@ -12,7 +12,7 @@ import java.time.ZonedDateTime;
 public class ZonedDateTimeAdapter extends TypeAdapter<ZonedDateTime> {
     @Override
     public void write(JsonWriter jsonWriter, ZonedDateTime zonedDateTime) throws IOException {
-        jsonWriter.value(jsonWriter.toString());
+        jsonWriter.value(zonedDateTime.toString());
     }
 
     @Override
