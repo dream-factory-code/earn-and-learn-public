@@ -1,4 +1,4 @@
-package hr.dreamfactory.lectures.soitbegins.model;
+package hr.dreamfactory.lectures.soitbegins.model.users;
 
 import com.google.gson.annotations.SerializedName;
 import com.univocity.parsers.annotations.Nested;
@@ -24,7 +24,7 @@ public class User {
 
     @Nested
     @SerializedName("dob")
-    private Dob date;
+    private DateOfBirth date;
 
     public String getGender() {
         return gender;
@@ -50,11 +50,11 @@ public class User {
         this.nationality = nationality;
     }
 
-    public Dob getDate() {
+    public DateOfBirth getDate() {
         return date;
     }
 
-    public void setDate(Dob date) {
+    public void setDate(DateOfBirth date) {
         this.date = date;
     }
 

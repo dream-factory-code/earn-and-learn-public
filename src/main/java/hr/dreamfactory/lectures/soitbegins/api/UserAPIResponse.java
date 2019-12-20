@@ -1,6 +1,6 @@
 package hr.dreamfactory.lectures.soitbegins.api;
 
-import hr.dreamfactory.lectures.soitbegins.model.User;
+import hr.dreamfactory.lectures.soitbegins.model.users.User;
 
 import java.util.List;
 

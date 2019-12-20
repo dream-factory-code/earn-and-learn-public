@@ -1,4 +1,4 @@
-package hr.dreamfactory.lectures.soitbegins.model;
+package hr.dreamfactory.lectures.soitbegins.model.observable;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

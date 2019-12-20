@@ -1,7 +1,7 @@
 package hr.dreamfactory.lectures.soitbegins.controllers;
 
 import hr.dreamfactory.lectures.soitbegins.api.RemoteRandomGenerator;
-import hr.dreamfactory.lectures.soitbegins.model.User;
+import hr.dreamfactory.lectures.soitbegins.model.users.User;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,6 +1,8 @@
 package hr.dreamfactory.lectures.soitbegins.model;
 
 
+import hr.dreamfactory.lectures.soitbegins.model.observable.LoggingObserver;
+import hr.dreamfactory.lectures.soitbegins.model.observable.Publisher;
 import org.junit.Test;
 
 public class PublisherTest {

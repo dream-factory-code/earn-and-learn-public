@@ -1,4 +1,4 @@
-package hr.dreamfactory.lectures.soitbegins.model;
+package hr.dreamfactory.lectures.soitbegins.model.users;
 
 import com.univocity.parsers.annotations.Parsed;
 

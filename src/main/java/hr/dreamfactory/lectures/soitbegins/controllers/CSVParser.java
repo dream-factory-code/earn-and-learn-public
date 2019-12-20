@@ -7,7 +7,7 @@ import com.univocity.parsers.csv.CsvParserSettings;
 import com.univocity.parsers.csv.CsvWriter;
 import com.univocity.parsers.csv.CsvWriterSettings;
 import hr.dreamfactory.lectures.soitbegins.common.UserGenerator;
-import hr.dreamfactory.lectures.soitbegins.model.User;
+import hr.dreamfactory.lectures.soitbegins.model.users.User;
 
 import java.io.File;
 import java.nio.file.Paths;

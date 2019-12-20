@@ -1,19 +1,21 @@
-package hr.dreamfactory.lectures.soitbegins.model;
+package hr.dreamfactory.lectures.soitbegins.model.users;
 
 import com.univocity.parsers.annotations.Parsed;
 
-public class Dob {
+import java.time.ZonedDateTime;
+
+public class DateOfBirth {
     @Parsed
-    private String date;
+    private ZonedDateTime date;
 
     @Parsed
     private String age;
 
-    public String getDate() {
+    public ZonedDateTime getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(ZonedDateTime date) {
         this.date = date;
     }
 

@@ -4,7 +4,8 @@ import feign.Feign;
 import feign.gson.GsonDecoder;
 import feign.jaxrs.JAXRSContract;
 import hr.dreamfactory.lectures.soitbegins.common.UserGenerator;
-import hr.dreamfactory.lectures.soitbegins.model.User;
+import hr.dreamfactory.lectures.soitbegins.model.users.User;
+import hr.dreamfactory.lectures.soitbegins.utils.ZonedDateTimeAdapter;
 
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class RemoteRandomGenerator implements UserGenerator {
         this.results = results;
         api = Feign.builder()
                 .contract(new JAXRSContract())
-                .decoder(new GsonDecoder())
+                .decoder(new GsonDecoder(ZonedDateTimeAdapter.createTimeZoneGson()))
                 .target(UserAPI.class, API_ENDPOINT);
     }
 

@@ -1,4 +1,6 @@
-package hr.dreamfactory.lectures.soitbegins.model;
+package hr.dreamfactory.lectures.soitbegins.model.observable;
+
+import hr.dreamfactory.lectures.soitbegins.model.observable.Observer;
 
 import java.util.ArrayList;
 import java.util.List;
