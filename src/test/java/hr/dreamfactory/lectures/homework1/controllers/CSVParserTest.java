@@ -10,7 +10,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.*;
 import java.util.function.BinaryOperator;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class CSVParserTest {
@@ -52,7 +51,7 @@ public class CSVParserTest {
         CSVParser parser = new CSVParser("chicken-me.csv", new RemoteRandomGenerator());
         List<User> parse = parser.parse("chicken-for-tests.csv");
 
-        BinaryOperator<User> selectFirst = (e1, e2) -> e1;
+        BinaryOperator<User> selectFirst = (e1, e2) -> e2;
         Comparator<User> comparator = Comparator.comparing(x -> x.getName().getFirst());
 
         Map<String, User> sorted = parse
