@@ -3,6 +3,7 @@ package hr.dreamfactory.lectures.soitbegins;
 import hr.dreamfactory.lectures.soitbegins.api.RemoteRandomGenerator;
 import hr.dreamfactory.lectures.soitbegins.controllers.CSVParser;
 import hr.dreamfactory.lectures.soitbegins.model.users.User;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,6 +21,7 @@ public class KjezicTest {
 
 
     @Test
+    @Ignore
     public void iranTest() {
         CSVParser parser = new CSVParser("irans.csv", new RemoteRandomGenerator());
         List<User> iranUsers = parser.parse("chicken-for-tests.csv")
@@ -30,6 +32,7 @@ public class KjezicTest {
     }
 
     @Test
+    @Ignore
     public void femalesInCity() {
         CSVParser parser = new CSVParser("females.csv", new RemoteRandomGenerator());
         List<User> users = parser.parse("chicken-for-tests.csv");

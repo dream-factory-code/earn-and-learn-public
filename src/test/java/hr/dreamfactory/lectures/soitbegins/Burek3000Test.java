@@ -3,6 +3,7 @@ package hr.dreamfactory.lectures.soitbegins;
 import hr.dreamfactory.lectures.soitbegins.api.RemoteRandomGenerator;
 import hr.dreamfactory.lectures.soitbegins.controllers.CSVParser;
 import hr.dreamfactory.lectures.soitbegins.model.users.User;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +18,7 @@ public class Burek3000Test {
     private static final Logger LOGGER = LoggerFactory.getLogger(Burek3000Test.class);
 
     @Test
+    @Ignore
     public void womenNumberInCity(){
 
         List<User> allUsers = new CSVParser("chicken-for-tests.csv", new RemoteRandomGenerator()).parse();

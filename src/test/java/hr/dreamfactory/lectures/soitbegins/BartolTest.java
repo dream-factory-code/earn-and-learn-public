@@ -4,6 +4,7 @@ import hr.dreamfactory.lectures.soitbegins.api.RemoteRandomGenerator;
 import hr.dreamfactory.lectures.soitbegins.controllers.CSVParser;
 import hr.dreamfactory.lectures.soitbegins.model.users.User;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,10 +24,11 @@ public class BartolTest {
     @Before
     public void setup() {
         csvParser = new CSVParser("./iranian-chicken.csv", new RemoteRandomGenerator());
-        allUsers = csvParser.parse("./chicken-for-test.csv");
+        allUsers = csvParser.parse("./chicken-for-tests.csv");
     }
 
     @Test
+    @Ignore
     public void filterIranians() {
         List<User> iranians = allUsers.stream()
                 .filter(t -> "IR".equals(t.getNationality()))
@@ -36,6 +38,7 @@ public class BartolTest {
     }
 
     @Test
+    @Ignore
     public void mapWomanNumberByCity() {
         Map<String, Long> womanNumberByCity = allUsers.stream()
                 .filter(t -> "female".equals(t.getGender()))

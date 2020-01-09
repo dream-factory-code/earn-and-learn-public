@@ -3,6 +3,7 @@ package hr.dreamfactory.lectures.soitbegins;
 import hr.dreamfactory.lectures.soitbegins.api.RemoteRandomGenerator;
 import hr.dreamfactory.lectures.soitbegins.controllers.CSVParser;
 import hr.dreamfactory.lectures.soitbegins.model.users.User;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,6 +20,7 @@ public class PetraTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(PetraTest.class);
 
     @Test
+    @Ignore
     public void petra() {
          CSVParser csvParser = new CSVParser("iran.csv", new RemoteRandomGenerator(10));
 
