@@ -6,6 +6,9 @@ import com.univocity.parsers.annotations.Parsed;
 
 public class User {
 
+    private User() {
+    }
+
     @Nested
     private Name name;
 

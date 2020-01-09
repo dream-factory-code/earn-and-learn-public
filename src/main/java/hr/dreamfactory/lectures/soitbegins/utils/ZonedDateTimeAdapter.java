@@ -22,7 +22,8 @@ public class ZonedDateTimeAdapter extends TypeAdapter<ZonedDateTime> {
 
 
     public static Gson createTimeZoneGson(){
-        return new GsonBuilder().registerTypeAdapter(ZonedDateTime.class, new ZonedDateTimeAdapter())
+        return new GsonBuilder()
+                .registerTypeAdapter(ZonedDateTime.class, new ZonedDateTimeAdapter())
                 .create();
     }
 }

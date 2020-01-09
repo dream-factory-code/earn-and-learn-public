@@ -8,13 +8,11 @@ import org.junit.Test;
 
 import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
-
 public class ZonedDateTimeAdapterTest {
 
     @Test(expected = RuntimeException.class)
     public void testNoAdapter_Exception(){
         DateOfBirth birth = createDateOfBirth();
-
         Gson gson = new Gson();
 
         String json = gson.toJson(birth);
