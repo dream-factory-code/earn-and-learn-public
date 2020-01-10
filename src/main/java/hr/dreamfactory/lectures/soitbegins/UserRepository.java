@@ -12,8 +12,8 @@ public class UserRepository {
     private List<User> users = new ArrayList<>();
 
     public UserRepository(List<User> users) {
-        this.users = users;
         generateId(users);
+        this.users = users;
     }
 
     public UserRepository() {
@@ -51,10 +51,10 @@ public class UserRepository {
         writer.writeUsersToCSV(users);
     }
     private void generateId(List<User> users){
-        users.forEach(user -> {
-            Integer i = 0;
+        Integer i = 0;
+        for(User user : users){
             user.setId(i++);
-        });
+        }
     }
 
     public void update(Integer id, User user) {
