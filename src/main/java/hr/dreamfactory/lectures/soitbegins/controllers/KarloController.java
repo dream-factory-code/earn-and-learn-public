@@ -15,7 +15,7 @@ public class KarloController {
     @Autowired
     private UserRepository repository;
 
-    @RequestMapping("/country_user")
+    @RequestMapping("/users/country")
     public List<User> filterByCountry(@RequestParam String country){
         return repository.find(country);
     }
