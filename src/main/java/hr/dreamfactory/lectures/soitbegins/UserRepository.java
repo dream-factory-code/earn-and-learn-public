@@ -43,4 +43,9 @@ public class UserRepository {
         });
     }
 
+    public void update(Integer id, User user){
+        delete(id);
+        users.add(user);
+    }
+
 }
