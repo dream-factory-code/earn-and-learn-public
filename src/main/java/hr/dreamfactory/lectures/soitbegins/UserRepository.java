@@ -1,5 +1,7 @@
 package hr.dreamfactory.lectures.soitbegins;
 
+import hr.dreamfactory.lectures.soitbegins.api.RemoteRandomGenerator;
+import hr.dreamfactory.lectures.soitbegins.controllers.CSVParser;
 import hr.dreamfactory.lectures.soitbegins.model.users.User;
 
 import java.util.ArrayList;
@@ -43,6 +45,18 @@ public class UserRepository {
         this.users = users;
     }
 
+
+    public List<User> skipAndLimit (int limit, int offset){
+        return users.stream()
+                .skip(offset)
+                .limit(limit)
+                .collect(Collectors.toList());
+    }
+
+    public void writeToCSV () {
+        CSVParser writer = new CSVParser("saveUsers.csv", new RemoteRandomGenerator());
+        writer.writeUsersToCSV(users);
+    }
     private void generateId(List<User> users){
         Integer i = 0;
         for(User user : users){
@@ -58,6 +72,7 @@ public class UserRepository {
     public void delete(Integer id) {
         User user = users.stream().filter(t -> t.getId().equals(id)).findFirst().get();
         users.remove(user);
+
     }
 
 }
