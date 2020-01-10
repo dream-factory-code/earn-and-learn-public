@@ -14,7 +14,6 @@ public class LukaMain {
         SpringApplication.run(LukaMain.class, args);
     }
 
-    @Bean
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
             CSVParser parser = new CSVParser("chicken-for-tests.csv", new RemoteRandomGenerator());
