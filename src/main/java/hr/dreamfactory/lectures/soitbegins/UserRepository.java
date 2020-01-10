@@ -47,7 +47,7 @@ public class UserRepository {
     }
 
     public void writeToCSV () {
-        CSVParser writer = new CSVParser("chicken-for-tests.csv", new RemoteRandomGenerator());
+        CSVParser writer = new CSVParser("saveUsers.csv", new RemoteRandomGenerator());
         writer.writeUsersToCSV(users);
     }
     private void generateId(List<User> users){

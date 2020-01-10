@@ -15,10 +15,14 @@ public class MiaController {
     @Autowired
     private UserRepository repository;
 
-    @RequestMapping("/mia")
-    public List<User> users(@RequestParam int limit, int offset) {
+    @RequestMapping("/users/paginate")
+    public List<User> users(@RequestParam int limit,@RequestParam int offset) {
         return repository.skipAndLimit(limit,offset);
     }
 
+    @RequestMapping("/users/save")
+    public void save() {
+        repository.writeToCSV();
+    }
 
 }
