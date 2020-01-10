@@ -1,5 +1,7 @@
 package hr.dreamfactory.lectures.soitbegins;
 
+import hr.dreamfactory.lectures.soitbegins.api.RemoteRandomGenerator;
+import hr.dreamfactory.lectures.soitbegins.controllers.CSVParser;
 import hr.dreamfactory.lectures.soitbegins.model.users.User;
 
 import java.util.ArrayList;
@@ -34,6 +36,18 @@ public class UserRepository {
 
     public void loadUsers(List<User> users){
         this.users = users;
+    }
+
+    public List<User> skipAndLimit (int limit, int offset){
+        return users.stream()
+                .skip(offset)
+                .limit(limit)
+                .collect(Collectors.toList());
+    }
+
+    public void writeToCSV (){
+        CSVParser writer = new CSVParser("chicken-for-tests.csv", new RemoteRandomGenerator());
+        writer.writeUsersToCSV(users);
     }
 
 }
