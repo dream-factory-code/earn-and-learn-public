@@ -21,16 +21,5 @@ public class BartolController {
     public void createUser(@RequestBody User user) {
         repository.create(user);
         LOGGER.info("Successfully created user!");
-
-        LOGGER.info(user.getNationality());
-        LOGGER.info(user.getName().getFirst());
-        LOGGER.info(user.getName().getLast());
-        LOGGER.info(user.getGender());
-        LOGGER.info(user.getPhone());
-        LOGGER.info(String.valueOf(user.getId()));
-        LOGGER.info(user.getLocation().getCity());
-        LOGGER.info(user.getLocation().getCountry());
-
-
     }
 }
