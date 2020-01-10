@@ -34,7 +34,7 @@
                 </transformer>
                 <transformer />
                 <transformer>
-                  <mainClass>hr.dreamfactory.lectures.soitbegins.Main</mainClass>
+                  <mainClass>hr.dreamfactory.lectures.soitbegins.LukaMain</mainClass>
                 </transformer>
               </transformers>
             </configuration>

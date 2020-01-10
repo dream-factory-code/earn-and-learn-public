@@ -100,7 +100,7 @@
                                         implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>hr.dreamfactory.lectures.soitbegins.Main</mainClass>
+                                    <mainClass>hr.dreamfactory.lectures.soitbegins.LukaMain</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
