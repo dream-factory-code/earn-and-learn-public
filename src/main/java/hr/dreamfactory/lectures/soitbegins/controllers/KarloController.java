@@ -12,6 +12,6 @@ public class KarloController {
     private UserRepository repository;
 
     public List<User> filterByCountry(String country){
-
+        return repository.find(country);
     }
 }
