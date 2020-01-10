@@ -18,7 +18,6 @@ public class CSVLukaParserTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(CSVLukaParserTest.class);
 
     @Test
-    @Ignore
     public void iranianChickenTest() {
         CSVParser parser = new CSVParser("iranian-chicken.csv", new RemoteRandomGenerator());
 
@@ -32,7 +31,6 @@ public class CSVLukaParserTest {
     }
 
     @Test
-    @Ignore
     public void groupingByTest() {
         CSVParser parser = new CSVParser("nation-count.csv", new RemoteRandomGenerator());
 

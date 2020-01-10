@@ -20,7 +20,6 @@ public class PetraTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(PetraTest.class);
 
     @Test
-    @Ignore
     public void petra() {
          CSVParser csvParser = new CSVParser("iran.csv", new RemoteRandomGenerator(10));
 

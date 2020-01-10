@@ -18,7 +18,6 @@ public class Burek3000Test {
     private static final Logger LOGGER = LoggerFactory.getLogger(Burek3000Test.class);
 
     @Test
-    @Ignore
     public void womenNumberInCity(){
 
         List<User> allUsers = new CSVParser("chicken-for-tests.csv", new RemoteRandomGenerator()).parse();

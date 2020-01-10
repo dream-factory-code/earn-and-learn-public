@@ -1,11 +1,14 @@
 package hr.dreamfactory.lectures.soitbegins.model.users;
 
+import com.univocity.parsers.annotations.Convert;
 import com.univocity.parsers.annotations.Parsed;
+import hr.dreamfactory.lectures.soitbegins.utils.LukinConverter;
 
 import java.time.ZonedDateTime;
 
 public class DateOfBirth {
     @Parsed
+    @Convert(conversionClass = LukinConverter.class)
     private ZonedDateTime date;
 
     @Parsed
