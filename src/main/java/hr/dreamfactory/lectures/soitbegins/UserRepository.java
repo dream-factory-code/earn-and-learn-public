@@ -26,7 +26,6 @@ public class UserRepository {
                 .filter(t -> t.getNationality().equals(country))
                 .collect(Collectors.toList());
     }
-
     public List<User> getUsers(int limit){
         return users.stream()
                 .limit(limit)
