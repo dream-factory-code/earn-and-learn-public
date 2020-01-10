@@ -39,7 +39,7 @@ public class UserRepository {
     private void generateId(List<User> users){
         Integer i = 0;
         for(User user : users){
-            user.setId(i);
+            user.setId(i++);
         }
     }
 
