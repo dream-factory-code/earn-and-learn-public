@@ -11,6 +11,7 @@ public class UserRepository {
 
     public UserRepository(List<User> users) {
         this.users = users;
+        generateId(users);
     }
 
     public UserRepository() {
@@ -25,7 +26,6 @@ public class UserRepository {
                 .filter(t -> t.getNationality().equals(country))
                 .collect(Collectors.toList());
     }
-
     public List<User> getUsers(int limit){
         return users.stream()
                 .limit(limit)
@@ -34,6 +34,13 @@ public class UserRepository {
 
     public void loadUsers(List<User> users){
         this.users = users;
+    }
+
+    private void generateId(List<User> users){
+        users.forEach(user -> {
+            Integer i = 0;
+            user.setId(i++);
+        });
     }
 
 }
