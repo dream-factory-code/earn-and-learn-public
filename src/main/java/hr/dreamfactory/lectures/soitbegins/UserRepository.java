@@ -37,10 +37,10 @@ public class UserRepository {
     }
 
     private void generateId(List<User> users){
-        users.forEach(user -> {
-            Integer i = 0;
-            user.setId(i++);
-        });
+        Integer i = 0;
+        for(User user : users){
+            user.setId(i);
+        }
     }
 
     public void update(Integer id, User user) {
