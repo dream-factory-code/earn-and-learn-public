@@ -3,6 +3,7 @@ package hr.dreamfactory.lectures.soitbegins;
 import hr.dreamfactory.lectures.soitbegins.api.RemoteRandomGenerator;
 import hr.dreamfactory.lectures.soitbegins.controllers.CSVParser;
 import hr.dreamfactory.lectures.soitbegins.model.users.User;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -28,12 +29,13 @@ public class BartolTest {
     }
 
     @Test
-    public void filterIranians() {
-        List<User> iranians = allUsers.stream()
-                .filter(t -> "IR".equals(t.getNationality()))
+    public void checkDate() {
+        List<User> dates = allUsers.stream()
+                .filter(t -> t.getDate().getDate() != null)
                 .collect(Collectors.toList());
 
-        csvParser.writeUsersToCSV(iranians);
+        Assert.assertTrue(dates.size() > 0);
+
     }
 
     @Test
