@@ -6,10 +6,12 @@ import hr.dreamfactory.lectures.soitbegins.model.users.User;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class UserRepository {
     private List<User> users = new ArrayList<>();
+    private Integer id;
 
     public UserRepository(List<User> users) {
         generateId(users);
@@ -20,6 +22,7 @@ public class UserRepository {
     }
 
     public void create(User user){
+        user.setId(id++);
         users.add(user);
     }
 
@@ -58,9 +61,9 @@ public class UserRepository {
         writer.writeUsersToCSV(users);
     }
     private void generateId(List<User> users){
-        Integer i = 0;
+        id = 0;
         for(User user : users){
-            user.setId(i++);
+            user.setId(id++);
         }
     }
 
@@ -70,9 +73,13 @@ public class UserRepository {
     }
 
     public void delete(Integer id) {
-        User user = users.stream().filter(t -> t.getId().equals(id)).findFirst().get();
-        users.remove(user);
+        Optional<User> user = users.stream()
+                .filter(t -> t.getId().equals(id))
+                .findFirst();
 
+        if(user.isPresent()){
+            users.remove(user);
+        }
     }
 
 }
