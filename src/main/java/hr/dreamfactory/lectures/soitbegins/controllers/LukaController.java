@@ -13,7 +13,7 @@ public class LukaController {
 
     @RequestMapping("/delete")
     private void delete(@RequestParam Integer id) {
-
+        repository.delete(id);
     }
 
 }
