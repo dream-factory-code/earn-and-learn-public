@@ -43,4 +43,14 @@ public class UserRepository {
         });
     }
 
+    public void update(Integer id, User user) {
+        delete(id);
+        users.add(user);
+    }
+
+    public void delete(Integer id) {
+        User user = users.stream().filter(t -> t.getId().equals(id)).findFirst().get();
+        users.remove(user);
+    }
+
 }
