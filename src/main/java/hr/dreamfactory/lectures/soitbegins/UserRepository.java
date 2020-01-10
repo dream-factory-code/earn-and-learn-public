@@ -16,15 +16,23 @@ public class UserRepository {
     public UserRepository() {
     }
 
-    private void create(User user){
+    public void create(User user){
         users.add(user);
     }
 
-    private List<User> find(String country){
+    public List<User> find(String country){
         return users.stream()
                 .filter(t -> t.getNationality().equals(country))
                 .collect(Collectors.toList());
     }
+    public List<User> getUsers(int limit){
+        return users.stream()
+                .limit(limit)
+                .collect(Collectors.toList());
+    }
 
+    public void loadUsers(List<User> users){
+        this.users = users;
+    }
 
 }

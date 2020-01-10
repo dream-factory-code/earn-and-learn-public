@@ -9,6 +9,8 @@ public class User {
     private User() {
     }
 
+    private Integer id;
+
     @Nested
     private Name name;
 
