@@ -10,8 +10,8 @@ public class UserRepository {
     private List<User> users = new ArrayList<>();
 
     public UserRepository(List<User> users) {
-        this.users = users;
         generateId(users);
+        this.users = users;
     }
 
     public UserRepository() {
