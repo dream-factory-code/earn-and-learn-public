@@ -6,9 +6,6 @@ import com.univocity.parsers.annotations.Parsed;
 
 public class User {
 
-    private User() {
-    }
-
     private Integer id;
 
     @Nested
