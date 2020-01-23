@@ -40,7 +40,6 @@ public class DatabaseAccess {
 
     public void insertPartial(User user){
 
-        "INSERT" + " into random_users" + " ... values( " + user.getNationality()
         try (Query query = sql2o.open().createQuery(insert)) {
             query.bind(user);
             query.executeUpdate();
